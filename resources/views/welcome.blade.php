@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravelです
+                    Laravel
                 </div>
 
                 <div class="links">
