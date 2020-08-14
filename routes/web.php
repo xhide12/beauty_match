@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('top');
-});
+Route::get('/', 'TopController@index');
+
 
 //ここからメーカー関係
 
