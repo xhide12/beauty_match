@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'manufacture',
         'passwords' => 'users',
     ],
 
@@ -39,6 +39,16 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'manufacture' => [
+            'driver' => 'session',
+            'provider' => 'manufactures',
         ],
 
         'api' => [
@@ -71,6 +81,11 @@ return [
             'model' => App\User::class,
         ],
 
+        'manufactures' => [
+            'driver' => 'eloquent',
+            'model' => App\Manufacture::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -98,6 +113,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
+        'manufactures' => [
+            'provider' => 'manufactures',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
     ],
 
 ];

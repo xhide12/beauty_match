@@ -144,3 +144,20 @@ Route::get('/password/reset/', function () {
 });
 
 //ここまで固定ページ関係
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
+    Route::get('/home', function () {
+        return view('manufacture.home');
+    });
+    Route::get('login', 'Manufacture\LoginController@showLoginForm')->name('manufacture.login');
+    Route::post('login', 'Manufacture\LoginController@login')->name('manufacture.login');
+    Route::get('register', 'Manufacture\RegisterController@showRegisterForm')->name('manufacture.register');
+    Route::post('register', 'Manufacture\RegisterController@register')->name('manufacture.register');
+    Route::get('password/rest', 'Manufacture\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
+});
