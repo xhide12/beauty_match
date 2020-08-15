@@ -35,10 +35,10 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest:manufacture');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest:manufacture');
+    // }
 
     /**
      * Get a validator for an incoming registration request.
@@ -52,7 +52,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'company_name' => ['required', 'string', 'max:255'],
+            'department_name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            ]);
     }
 
     public function showRegisterForm(){
@@ -71,6 +74,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'company_name' => $data['company_name'],
+            'department_name' => $data['department_name'],
+            'phone' => $data['phone'],
         ]);
     }
 

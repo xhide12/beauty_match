@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/manufacture/home';
 
     /**
      * Create a new controller instance.
@@ -33,10 +33,10 @@ class LoginController extends Controller
      * @return void
      */
 
-    public function __construct()
-    {
-        $this->middleware('guest:manufacture')->except('logout');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest:manufacture')->except('logout');
+    // }
     public function showLoginForm()
     {
         return view('manufacture.login');
@@ -49,7 +49,7 @@ class LoginController extends Controller
             'password' => 'required|min:4',
         ]);
         if(Auth::attempt(['email'=>$request->input('email'),'password'=>$request->input('password')])){
-            return redirect()->route('/');//リダイレクト先は好きなところへ
+            return redirect()->route('/manufacture/home');//リダイレクト先は好きなところへ
         }else{
             return redirect()->back()->with('ログインに失敗しました');
         }
