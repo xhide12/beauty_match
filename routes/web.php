@@ -144,20 +144,59 @@ Route::get('/password/reset/', function () {
 });
 
 //ここまで固定ページ関係
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 
+// Auth::routes();
+// Route::get('/home', 'User\Auth\LoginController@index')->name('home');
 
 
-Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
-    Route::get('/home', function () {
-        return view('manufacture.home');
+// Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
+//     Route::get('/home', function () {
+//         return view('manufacture.home');
+//     });
+//     Route::get('login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
+//     Route::post('login', 'Manufacture\Auth\LoginController@login')->name('manufacture.login');
+//     Route::get('register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
+//     Route::post('register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
+//     Route::get('password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
+// });
+
+
+// ユーザー
+Route::namespace('User')->prefix('user')->name('user.')->group(function () {
+
+    // ログイン認証関連
+    Auth::routes([
+        'register' => true,
+        'reset'    => false,
+        'verify'   => false
+    ]);
+
+    // ログイン認証後
+    Route::middleware('auth:user')->group(function () {
+
+        // TOPページ
+        Route::resource('home', 'HomeController', ['only' => 'index']);
+
     });
-    Route::get('login', 'Manufacture\LoginController@showLoginForm')->name('manufacture.login');
-    Route::post('login', 'Manufacture\LoginController@login')->name('manufacture.login');
-    Route::get('register', 'Manufacture\RegisterController@showRegisterForm')->name('manufacture.register');
-    Route::post('register', 'Manufacture\RegisterController@register')->name('manufacture.register');
-    Route::get('password/rest', 'Manufacture\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
+});
+
+// 管理者
+Route::namespace('Manufacture')->prefix('manufacture')->name('manufacture.')->group(function () {
+
+    // ログイン認証関連
+    Auth::routes([
+        'register' => true,
+        'reset'    => false,
+        'verify'   => false
+    ]);
+
+    // ログイン認証後
+    Route::middleware('auth:manufacture')->group(function () {
+
+        // TOPページ
+        Route::resource('home', 'HomeController', ['only' => 'index']);
+
+    });
+
 });

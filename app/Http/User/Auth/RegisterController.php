@@ -1,12 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Manufacture;
+namespace App\Http\Controllers\User\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Manufacture;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
@@ -28,17 +32,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/manufacture/home';
+    protected $redirectTo = '/user/home';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest:manufacture');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest:user');
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -46,42 +50,35 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+    // Guardの認証方法を指定
+    protected function guard()
+    {
+        return Auth::guard('user');
+    }
+
+    // 新規登録画面
+    public function showRegistrationForm()
+    {
+        return view('user.auth.register');
+    }
+
+    // バリデーション
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'company_name' => ['required', 'string', 'max:255'],
-            'department_name' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:255'],
-            ]);
-    }
-
-    public function showRegisterForm(){
-        return view('manufacture.register');  // 管理者用テンプレート
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return Manufacture::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'company_name' => $data['company_name'],
-            'department_name' => $data['department_name'],
-            'phone' => $data['phone'],
         ]);
     }
 
-    protected function guard(){
-        return \Auth::guard('manufacture'); //管理者認証のguardを指定
+    // 登録処理
+    protected function create(array $data)
+    {
+        return User::create([
+            'name'     => $data['name'],
+            'email'    => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
-
 }

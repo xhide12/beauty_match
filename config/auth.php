@@ -78,12 +78,12 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Models\User\Auth::class,
         ],
 
         'manufactures' => [
             'driver' => 'eloquent',
-            'model' => App\Manufacture::class,
+            'model' => App\Models\Manufacture\Auth::class,
         ],
 
         // 'users' => [

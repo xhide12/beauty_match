@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Manufacture;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\Manufacture;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,17 +28,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/manufacture/home';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest:manufacture');
+    // }
 
     /**
      * Get a validator for an incoming registration request.
@@ -50,9 +50,16 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'company_name' => ['required', 'string', 'max:255'],
+            'department_name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            ]);
+    }
+
+    public function showRegisterForm(){
+        return view('manufacture.register');  // 管理者用テンプレート
     }
 
     /**
@@ -63,10 +70,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Manufacture::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'company_name' => $data['company_name'],
+            'department_name' => $data['department_name'],
+            'phone' => $data['phone'],
         ]);
     }
+
+    protected function guard(){
+        return \Auth::guard('manufacture'); //管理者認証のguardを指定
+    }
+
 }
