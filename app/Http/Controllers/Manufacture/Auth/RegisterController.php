@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Manufacture;
+namespace App\Http\Controllers\Manufacture\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Manufacture;
