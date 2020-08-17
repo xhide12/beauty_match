@@ -42,7 +42,7 @@ class LoginController extends Controller
     // }
     public function showLoginForm()
     {
-        return view('manufacture.login');
+        return view('manufacture.auth.login');
     }
 
     public function authenticate(Request $request)
