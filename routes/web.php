@@ -147,19 +147,57 @@ Route::get('/password/reset/', function () {
 
 
 // Auth::routes();
-Route::get('/home', 'User\Auth\LoginController@index')->name('home');
+// Route::get('/home', 'User\Auth\LoginController@index')->name('home');
+
+// Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
+//     Route::get('/home', function () {
+//         return view('user.home');
+//     });
+//     Route::get('login', 'User\Auth\LoginController@showLoginForm')->name('user.login');
+//     Route::post('login', 'User\Auth\LoginController@login')->name('user.login');
+//     Route::get('register', 'User\Auth\RegisterController@showRegisterForm')->name('user.register');
+//     Route::post('register', 'User\Auth\RegisterController@register')->name('user.register');
+//     Route::get('password/rest', 'User\Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
+// });
+
+Route::get('user/login', 'User\Auth\LoginController@showLoginForm')->name('user.login');
+Route::post('user/login', 'User\Auth\LoginController@login');
+Route::post('user/logout', 'User\Auth\LoginController@logout')->name('logout');
+
+Route::get('user/register', 'User\Auth\RegisterController@showRegistrationForm')->name('user.register');
+Route::post('user/register', 'User\Auth\RegisterController@register');
+
+Route::get('user/password/reset', 'User\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('user/password/email', 'User\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('user/password/reset/{token}', 'User\Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('user/password/reset', 'User\Auth\ResetPasswordController@reset');
 
 
-Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
-    Route::get('/home', function () {
-        return view('manufacture.home');
-    });
-    Route::get('login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.auth.login');
-    Route::post('login', 'Manufacture\Auth\LoginController@login')->name('manufacture.auth.login');
-    Route::get('register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.auth.register');
-    Route::post('register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.auth.register');
-    Route::get('password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
-});
+
+
+// Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
+//     Route::get('/home', function () {
+//         return view('manufacture.home');
+//     });
+//     Route::get('login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
+//     Route::post('login', 'Manufacture\Auth\LoginController@login')->name('manufacture.login');
+//     Route::get('register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
+//     Route::post('register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
+//     Route::get('password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
+// });
+
+Route::get('manufacture/login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
+Route::post('manufacture/login', 'Manufacture\Auth\LoginController@login');
+Route::post('manufacture/logout', 'Manufacture\Auth\LoginController@logout')->name('logout');
+
+Route::get('manufacture/register', 'Manufacture\Auth\RegisterController@showRegistrationForm')->name('manufacture.register');
+Route::post('manufacture/register', 'Manufacture\Auth\RegisterController@register');
+
+Route::get('manufacture/password/reset', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('manufacture/password/email', 'Manufacture\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('manufacture/password/reset/{token}', 'Manufacture\Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('manufacture/password/reset', 'Manufacture\Auth\ResetPasswordController@reset');
+
 
 
 // // ユーザー

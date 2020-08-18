@@ -52,6 +52,11 @@ class LoginController extends Controller
         return view('user.auth.login');
     }
 
+    public function index()
+    {
+        return view('user.auth.login');
+    }
+
     // ログアウト処理
     public function logout(Request $request)
     {

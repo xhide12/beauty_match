@@ -3,10 +3,15 @@
 namespace App\Http\Controllers\Manufacture\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\Manufacture;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Manufacture;
+
 
 class RegisterController extends Controller
 {
@@ -59,7 +64,7 @@ class RegisterController extends Controller
     }
 
     public function showRegisterForm(){
-        return view('manufacture.register');  // 管理者用テンプレート
+        return view('manufacture.auth.register');  // 管理者用テンプレート
     }
 
     /**

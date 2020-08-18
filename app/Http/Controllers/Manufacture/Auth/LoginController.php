@@ -45,6 +45,12 @@ class LoginController extends Controller
         return view('manufacture.auth.login');
     }
 
+    public function index()
+    {
+        return view('manufacture.auth.login');
+    }
+
+
     public function authenticate(Request $request)
     {
         $request->validate([
