@@ -184,6 +184,8 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], f
     Route::get('register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
     Route::post('register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
     Route::get('password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
+    Route::post('manufacture/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
+
 });
 
 // Route::get('manufacture/login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
