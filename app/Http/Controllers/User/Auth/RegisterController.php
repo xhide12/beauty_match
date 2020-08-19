@@ -57,7 +57,7 @@ class RegisterController extends Controller
     }
 
     // 新規登録画面
-    public function showRegistrationForm()
+    public function showRegisterForm()
     {
         return view('user.auth.register');
     }
@@ -67,6 +67,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name'     => ['required', 'string', 'max:255'],
+            'line_id'     => ['required', 'string', 'max:255'],
+            'salon_name'     => ['required', 'string', 'max:255'],
+            'salon_url'     => ['required', 'string', 'max:255'],
+            'business_form'     => ['required', 'int', 'max:11'],
+            'monthly_sales'     => ['required', 'string', 'max:255'],
+            'living_area'     => ['required', 'int', 'max:11'],
+            'facebook_id'     => ['required', 'string', 'max:255'],
+            'instagram_id'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -77,6 +85,14 @@ class RegisterController extends Controller
     {
         return User::create([
             'name'     => $data['name'],
+            'line_id'     => $data['line_id'],
+            'salon_name'     => $data['salon_name'],
+            'salon_url'     => $data['salon_url'],
+            'business_form'     => $data['business_form'],
+            'monthly_sales'     => $data['monthly_sales'],
+            'living_area'     => $data['living_area'],
+            'facebook_id'     => $data['facebook_id'],
+            'instagram_id'     => $data['instagram_id'],
             'email'    => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

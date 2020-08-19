@@ -26,6 +26,118 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="line_id" class="col-md-4 col-form-label text-md-right">{{ __('Line ID') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="line_id" type="line_id" class="form-control @error('line_id') is-invalid @enderror" name="line_id" value="{{ old('line_id') }}" required autocomplete="line_id">
+
+                                @error('line_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="salon_name" class="col-md-4 col-form-label text-md-right">{{ __('Salon Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="salon_name" type="salon_name" class="form-control @error('salon_name') is-invalid @enderror" name="salon_name" value="{{ old('salon_name') }}" required autocomplete="salon_name">
+
+                                @error('salon_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="salon_url" class="col-md-4 col-form-label text-md-right">{{ __('Salon URL') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="salon_url" type="salon_url" class="form-control @error('salon_url') is-invalid @enderror" name="salon_url" value="{{ old('salon_url') }}" required autocomplete="salon_url">
+
+                                @error('salon_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="business_form" class="col-md-4 col-form-label text-md-right">{{ __('Business Form') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="business_form" type="business_form" class="form-control @error('business_form') is-invalid @enderror" name="business_form" value="{{ old('business_form') }}" required autocomplete="business_form">
+
+                                @error('business_form')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="monthly_sales" class="col-md-4 col-form-label text-md-right">{{ __('Monthly Sales') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="monthly_sales" type="monthly_sales" class="form-control @error('monthly_sales') is-invalid @enderror" name="monthly_sales" value="{{ old('monthly_sales') }}" required autocomplete="monthly_sales">
+
+                                @error('monthly_sales')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="living_area" class="col-md-4 col-form-label text-md-right">{{ __('Living Area') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="living_area" type="living_area" class="form-control @error('living_area') is-invalid @enderror" name="living_area" value="{{ old('living_area') }}" required autocomplete="living_area">
+
+                                @error('living_area')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="facebook_id" class="col-md-4 col-form-label text-md-right">{{ __('Facebook ID') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="facebook_id" type="facebook_id" class="form-control @error('facebook_id') is-invalid @enderror" name="facebook_id" value="{{ old('facebook_id') }}" required autocomplete="facebook_id">
+
+                                @error('facebook_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="instagram_id" class="col-md-4 col-form-label text-md-right">{{ __('Instagram ID') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="instagram_id" type="instagram_id" class="form-control @error('instagram_id') is-invalid @enderror" name="instagram_id" value="{{ old('instagram_id') }}" required autocomplete="instagram_id">
+
+                                @error('instagram_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
