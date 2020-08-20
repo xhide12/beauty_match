@@ -40,16 +40,16 @@ class LoginController extends Controller
     // {
     //     $this->middleware('guest:manufacture')->except('logout');
     // }
+
     public function showLoginForm()
     {
         return view('manufacture.auth.login');
     }
 
-    public function index()
-    {
-        return view('manufacture.auth.login');
-    }
-
+    // public function index()
+    // {
+    //     return view('manufacture.auth.login');
+    // }
 
     public function authenticate(Request $request)
     {
@@ -58,11 +58,12 @@ class LoginController extends Controller
             'password' => 'required|min:4',
         ]);
         if(Auth::attempt(['email'=>$request->input('email'),'password'=>$request->input('password')])){
-            return redirect()->route('/manufacture/home');//リダイレクト先は好きなところへ
+            return redirect()->route('manufacture.auth.login');//リダイレクト先は好きなところへ
         }else{
             return redirect()->back()->with('ログインに失敗しました');
         }
     }
+
     protected function guard()
     {
         return \Auth::guard('manufacture');
