@@ -147,7 +147,7 @@ Route::get('/password/reset/', function () {
 
 
 // Auth::routes();
-Route::get('/', 'TopController@index')->name('home');
+Route::get('/home', 'User\Auth\LoginController@index')->name('home');
 
 Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
     Route::get('/home', function () {
@@ -158,6 +158,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
     Route::get('register', 'User\Auth\RegisterController@showRegisterForm')->name('user.register');
     Route::post('register', 'User\Auth\RegisterController@register')->name('user.register');
     Route::get('password/rest', 'User\Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
+    Route::post('logout', 'User\Auth\LoginController@logout')->name('user.logout');
 });
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
@@ -169,8 +170,7 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], f
     Route::get('register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
     Route::post('register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
     Route::get('password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
-    Route::post('manufacture/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
-
+    Route::post('logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
 });
 
 // // ユーザー
