@@ -43,11 +43,11 @@
                         <!-- Authentication Links -->
                         @unless (Auth::guard('manufacture')->check())
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('manufacture.login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('manufacture.login') }}">{{ __('ログイン') }}</a>
                             </li>
                             @if (Route::has('manufacture.register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('manufacture.register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('manufacture.register') }}">{{ __('新規登録') }}</a>
                                 </li>
                             @endif
                         @else
