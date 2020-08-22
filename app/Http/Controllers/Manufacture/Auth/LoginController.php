@@ -40,7 +40,6 @@ class LoginController extends Controller
     // {
     //     $this->middleware('guest:manufacture')->except('logout');
     // }
-
     public function showLoginForm()
     {
         return view('manufacture.auth.login');
@@ -48,8 +47,9 @@ class LoginController extends Controller
 
     // public function index()
     // {
-    //     return view('manufacture.login');
+    //     return view('manufacture.auth.login');
     // }
+
 
     public function authenticate(Request $request)
     {
@@ -63,7 +63,6 @@ class LoginController extends Controller
             return redirect()->back()->with('ログインに失敗しました');
         }
     }
-
     protected function guard()
     {
         return \Auth::guard('manufacture');

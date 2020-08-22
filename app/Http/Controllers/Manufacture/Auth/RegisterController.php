@@ -55,15 +55,15 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
             'company_name' => ['required', 'string', 'max:255'],
             'department_name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
             ]);
     }
 
-    public function showRegisterForm(){
+    public function showRegistrationForm(){
         return view('manufacture.auth.register');  // 管理者用テンプレート
     }
 
@@ -77,11 +77,11 @@ class RegisterController extends Controller
     {
         return Manufacture::create([
             'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
             'company_name' => $data['company_name'],
             'department_name' => $data['department_name'],
             'phone' => $data['phone'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
         ]);
     }
 
