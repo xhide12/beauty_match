@@ -40,10 +40,10 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest:manufacture');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest:manufacture');
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -51,20 +51,30 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+     //管理者認証のguardを指定
+    protected function guard(){
+        return \Auth::guard('manufacture');
+    }
+
+      // 管理者用テンプレート
+    public function showRegisterForm(){
+        return view('manufacture.auth.register');
+    }
+
+    // バリデーション
     protected function validator(array $data)
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:manufactures'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'company_name' => ['required', 'string', 'max:255'],
-            'department_name' => ['required', 'string', 'max:255'],
-            'phone' => ['required', 'string', 'max:255'],
+            'company_name' => ['string', 'max:255'],
+            // 'company_name' => ['required', 'string', 'max:255'],
+            'department_name' => ['string', 'max:255'],
+            // 'department_name' => ['required', 'string', 'max:255'],
+            'phone' => ['string', 'max:255'],
+            // 'phone' => ['required', 'string', 'max:255'],
             ]);
-    }
-
-    public function showRegisterForm(){
-        return view('manufacture.auth.register');  // 管理者用テンプレート
     }
 
     /**
@@ -85,8 +95,5 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function guard(){
-        return \Auth::guard('manufacture'); //管理者認証のguardを指定
-    }
 
 }

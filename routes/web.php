@@ -154,22 +154,17 @@ Route::get('/password/reset/', function () {
 
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
-
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
-
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
-
     Route::get('/home', 'User\HomeController@index')->name('user.home');
     Route::post('/logout', 'User\Auth\LoginController@logout')->name('user.logout');
-
 });
 
 
 Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
-
     Route::get('/login', 'User\Auth\LoginController@showLoginForm')->name('user.login');
     Route::post('/login', 'User\Auth\LoginController@login')->name('user.login');
     Route::get('/register', 'User\Auth\RegisterController@showRegisterForm')->name('user.register');
@@ -178,7 +173,6 @@ Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
 });
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
-
     Route::get('/login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
     Route::post('/login', 'Manufacture\Auth\LoginController@login')->name('manufacture.login');
     Route::get('/register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
