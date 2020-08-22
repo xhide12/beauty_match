@@ -154,9 +154,6 @@ Route::get('/password/reset/', function () {
 
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
-    // Route::get('/home', function () {
-    //     return view('user.home');
-    // });
 
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
@@ -164,9 +161,7 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
-    // Route::get('/home', function () {
-    //     return view('manufacture.home');
-    // });
+
     Route::get('/home', 'User\HomeController@index')->name('user.home');
     Route::post('/logout', 'User\Auth\LoginController@logout')->name('user.logout');
 
@@ -190,42 +185,3 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], f
     Route::post('/register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
     Route::get('/password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
 });
-
-// // ユーザー
-// Route::namespace('User')->prefix('user')->name('user.')->group(function () {
-
-//     // ログイン認証関連
-//     Auth::routes([
-//         'register' => true,
-//         'reset'    => false,
-//         'verify'   => false
-//     ]);
-
-//     // ログイン認証後
-//     Route::middleware('auth:user')->group(function () {
-
-//         // TOPページ
-//         Route::resource('home', 'HomeController', ['only' => 'index']);
-
-//     });
-// });
-
-// // メーカー
-// Route::namespace('Manufacture')->prefix('manufacture')->name('manufacture.')->group(function () {
-
-//     // ログイン認証関連
-//     Auth::routes([
-//         'register' => true,
-//         'reset'    => false,
-//         'verify'   => false
-//     ]);
-
-//     // ログイン認証後
-//     Route::middleware('auth:manufacture')->group(function () {
-
-//         // TOPページ
-//         Route::resource('home', 'HomeController', ['only' => 'index']);
-
-//     });
-
-// });

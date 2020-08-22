@@ -69,6 +69,14 @@ class RegisterController extends Controller
             'name'     => ['required', 'string', 'max:255'],
             'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'line_id'    => ['string', 'max:255'],
+            'salon_name'    => ['required', 'string', 'max:255'],
+            'salon_url'    => ['string', 'max:255'],
+            'business_form'    => ['required', 'integer', 'max:11'],
+            'monthly_sales'    => ['string', 'max:255'],
+            'living_area'    => ['required', 'integer', 'max:11'],
+            'facebook_id'    => ['required', 'string', 'max:255'],
+            'instagram_id'    => ['required', 'string', 'max:255'],
         ]);
     }
 
