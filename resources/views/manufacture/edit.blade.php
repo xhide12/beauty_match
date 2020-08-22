@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">管理画面</div>
+                <div class="card-header">編集画面</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -29,16 +29,24 @@
                             </thead>
                             <tbody>
                                         <tr>
-                                            <td>{{ $manufacture->name }}</td>
-                                            <td>{{ $manufacture->email }}</td>
-                                            <td>{{ $manufacture->company_name }}</td>
-                                            <td>{{ $manufacture->department_name}}</td>
-                                            <td>{{ $manufacture->phone}}</td>
+                                            <td>
+                                                <input type="text" name="name" value="{{old( 'name', $manufacture->name )}}">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="email" value="{{old( 'email', $manufacture->email )}}">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="company_name" value="{{old( 'company_name', $manufacture->company_name )}}">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="department_name" value="{{old( 'department_name', $manufacture->department_name )}}">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="phone" value="{{old( 'phone', $manufacture->phone )}}">
+                                            </td>
                                         </tr>
                             </tbody>
                         </table>
-
-                        <a href="/manufacture/edit">編集する</a>
 
                     </div>
 

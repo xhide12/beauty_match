@@ -156,6 +156,8 @@ Route::get('/password/reset/', function () {
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
+    Route::get('/edit', 'Manufacture\HomeController@edit')->name('manufacture.edit');
+    Route::post('/update', 'Manufacture\HomeController@update')->name('manufacture.update');
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){

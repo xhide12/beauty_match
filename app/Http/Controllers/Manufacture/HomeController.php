@@ -27,9 +27,43 @@ class HomeController extends Controller
     public function index()
     {
         $manufacture = Manufacture::find(Auth::id());
-
         return view('manufacture.home',compact('manufacture'));
-
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit()
+    {
+        $manufacture = Manufacture::find(Auth::id());
+        return view('manufacture.edit',compact('manufacture'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
 }
 
