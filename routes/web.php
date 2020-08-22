@@ -69,9 +69,12 @@ Route::get('/product/regiter_update/', function () {
     return view('product.register_update');
 });
 
-Route::get('/product/regiter/', function () {
+Route::get('/product/register/', function () {
     return view('product.register');
 });
+
+Route::post('/product/store', 'ProductController@store');
+
 
 Route::get('/product/top/', function () {
     return view('product.top');

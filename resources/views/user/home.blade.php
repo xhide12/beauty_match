@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    {{$user->name}}
+
                 </div>
             </div>
         </div>

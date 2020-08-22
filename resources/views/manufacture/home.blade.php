@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in 2!
+                    {{$manufacture->name}}
+
                 </div>
             </div>
         </div>

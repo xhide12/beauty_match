@@ -57,7 +57,7 @@ class RegisterController extends Controller
     }
 
     // 新規登録画面
-    public function showRegistrationForm()
+    public function showRegisterForm()
     {
         return view('user.auth.register');
     }
@@ -79,6 +79,14 @@ class RegisterController extends Controller
             'name'     => $data['name'],
             'email'    => $data['email'],
             'password' => Hash::make($data['password']),
+            'line_id'    => $data['line_id'],
+            'salon_name'    => $data['salon_name'],
+            'salon_url'    => $data['salon_url'],
+            'business_form'    => $data['business_form'],
+            'monthly_sales'    => $data['monthly_sales'],
+            'living_area'    => $data['living_area'],
+            'facebook_id'    => $data['facebook_id'],
+            'instagram_id'    => $data['instagram_id'],
         ]);
     }
 }

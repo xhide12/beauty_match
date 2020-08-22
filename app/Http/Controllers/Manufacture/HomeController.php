@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Manufacture;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Manufacture;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,7 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('manufacture.home');
+        $manufacture = Manufacture::find(Auth::id());
+
+        return view('manufacture.home',compact('manufacture'));
+
     }
 }
 

@@ -63,7 +63,7 @@ class RegisterController extends Controller
             ]);
     }
 
-    public function showRegistrationForm(){
+    public function showRegisterForm(){
         return view('manufacture.auth.register');  // 管理者用テンプレート
     }
 
