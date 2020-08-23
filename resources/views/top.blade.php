@@ -1,4 +1,3 @@
-<!-- @extends('layouts.common') -->
 @extends('layouts.user.app')
 
 @section('content')
