@@ -15,7 +15,8 @@
                     @endif
 
                     You are logged in 2!<br>
-
+                    <form action='{{ route('manufacture.update')}}' method="post">
+                    {{ csrf_field() }}
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -47,9 +48,10 @@
                                         </tr>
                             </tbody>
                         </table>
-
+                        <input type='hidden' name='id' value='{{ $manufacture->id }}'><br>
+                        <input type='submit' value='投稿'>
                     </div>
-
+                    </form>
                 </div>
             </div>
         </div>

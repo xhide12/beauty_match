@@ -36,7 +36,7 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Request $request)
     {
         $manufacture = Manufacture::find(Auth::id());
         return view('manufacture.edit',compact('manufacture'));
@@ -49,9 +49,16 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $manufacture = Manufacture::find(Auth::id());
+        $manufacture->name = $request->name;
+        $manufacture->email = $request->email;
+        $manufacture->company_name = $request->company_name;
+        $manufacture->department_name = $request->department_name;
+        $manufacture->phone = $request->phone;
+        $manufacture->save();
+        return redirect('/manufacture/home');
     }
 
     /**

@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <form action='{{ route('user.update')}}' method="post">
+                    {{ csrf_field() }}
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -33,22 +35,23 @@
                             </thead>
                             <tbody>
                                         <tr>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->line_id }}</td>
-                                            <td>{{ $user->salon_name}}</td>
-                                            <td>{{ $user->salon_url}}</td>
-                                            <td>{{ $user->business_form}}</td>
-                                            <td>{{ $user->monthly_sales}}</td>
-                                            <td>{{ $user->living_area}}</td>
-                                            <td>{{ $user->facebook_id}}</td>
-                                            <td>{{ $user->instagram_id}}</td>
+                                            <td><input type="text" name="name" value="{{old( 'name', $user->name )}}"></td>
+                                            <td><input type="text" name="email" value="{{old( 'email', $user->email )}}"></td>
+                                            <td><input type="text" name="line_id" value="{{old( 'line_id', $user->line_id )}}"></td>
+                                            <td><input type="text" name="salon_name" value="{{old( 'salon_name', $user->salon_name )}}"></td>
+                                            <td><input type="text" name="salon_url" value="{{old( 'salon_url', $user->salon_url )}}"></td>
+                                            <td><input type="text" name="business_form" value="{{old( 'business_form', $user->business_form )}}"></td>
+                                            <td><input type="text" name="monthly_sales" value="{{old( 'monthly_sales', $user->monthly_sales )}}"></td>
+                                            <td><input type="text" name="living_area" value="{{old( 'living_area', $user->living_area )}}"></td>
+                                            <td><input type="text" name="facebook_id" value="{{old( 'facebook_id', $user->facebook_id )}}"></td>
+                                            <td><input type="text" name="instagram_id" value="{{old( 'instagram_id', $user->instagram_id )}}"></td>
  
                                         </tr>
                             </tbody>
                         </table>
 
-                        <a href="/user/edit">編集する</a>
+                        <input type='hidden' name='id' value='{{ $user->id }}'><br>
+                        <input type='submit' value='投稿'>
 
                     </div>
 
