@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">編集画面</div>
 
@@ -14,44 +14,49 @@
                         </div>
                     @endif
 
-                    You are logged in 2!<br>
+                    <div class="table-responsive">
                     <form action='{{ route('manufacture.update')}}' method="post">
                     {{ csrf_field() }}
-                    <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="table table-striped text-nowrap">
                             <thead>
                                 <tr>
-                                    <th>{{__('name')}}</th>
-                                    <th>{{__('email')}}</th>
-                                    <th>{{__('company_name')}}</th>
-                                    <th>{{__('department_name')}}</th>
-                                    <th>{{__('phone')}}</th>
+                                    <th>項目</th>
+                                    <th>登録内容</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="text" name="name" value="{{old( 'name', $manufacture->name )}}">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="email" value="{{old( 'email', $manufacture->email )}}">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="company_name" value="{{old( 'company_name', $manufacture->company_name )}}">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="department_name" value="{{old( 'department_name', $manufacture->department_name )}}">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="phone" value="{{old( 'phone', $manufacture->phone )}}">
-                                            </td>
-                                        </tr>
+                                <tr>
+                                    <td>{{__('name')}}</td>
+                                    <td><input type="text" name="name" value="{{old( 'name', $manufacture->name )}}"></td>
+                                </tr>
+                                <tr>
+                                    <td>{{__('email')}}</td>
+                                    <td><input type="text" name="email" value="{{old( 'email', $manufacture->email )}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{__('company_name')}}</td>
+                                    <td><input type="text" name="company_name" value="{{old( 'company_name', $manufacture->company_name )}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{__('department_name')}}</td>
+                                    <td><input type="text" name="department_name" value="{{old( 'department_name', $manufacture->department_name )}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>{{__('phone')}}</th>
+                                    <td><input type="text" name="phone" value="{{old( 'phone', $manufacture->phone )}}">
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
+                        
                         <input type='hidden' name='id' value='{{ $manufacture->id }}'><br>
-                        <input type='submit' value='投稿'>
-                    </div>
+                        <button class="btn btn-primary" type='submit'>変更</button>
+                        <input type="button" onclick="history.back()" value="戻る">
                     </form>
+                    </div>
                 </div>
             </div>
         </div>

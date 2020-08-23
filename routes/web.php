@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TopController@index');
+// Route::get('/', 'TopController@index');
 
 
 //ここからメーカー関係
@@ -150,14 +150,16 @@ Route::get('/password/reset/', function () {
 
 
 // Auth::routes();
-// Route::get('/home', 'User\Auth\LoginController@index')->name('home');
-
+// Route::get('/', 'User\Auth\LoginController@index')->name('home');
+Route::get('/', 'TopController@index');
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
     Route::get('/edit', 'Manufacture\HomeController@edit')->name('manufacture.edit');
     Route::post('/edit', 'Manufacture\HomeController@update')->name('manufacture.update');
+    Route::get('/delete', 'Manufacture\HomeController@delete')->name('manufacture_delete');
+    Route::post('/remove', 'Manufacture\HomeController@remove')->name('manufacture_remove'); 
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
@@ -165,6 +167,8 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
     Route::post('/logout', 'User\Auth\LoginController@logout')->name('user.logout');
     Route::get('/edit', 'User\HomeController@edit')->name('user.edit');
     Route::post('/edit', 'User\HomeController@update')->name('user.update');
+    Route::get('/delete', 'User\HomeController@delete')->name('user_delete');
+    Route::post('/remove', 'User\HomeController@remove')->name('user_remove'); 
 });
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {

@@ -68,17 +68,18 @@ class HomeController extends Controller
         return redirect('/user/home');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        $user = User::find($request->id);
+        return view('user.delete', ['user' => $user]); 
     }
-
+    
+    public function remove(Request $request)
+    {
+        $user = User::find($request->id);
+        $user->delete();
+        return redirect('/');
+    }
 
 }
 

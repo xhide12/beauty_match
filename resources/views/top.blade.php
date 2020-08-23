@@ -1,6 +1,7 @@
-@extends('layouts.common')
-@section('content')
+<!-- @extends('layouts.common') -->
+@extends('layouts.user.app')
 
+@section('content')
 <div class="container">
   <h1>TOPページです</h1>
   <!-- <img class="img-fluid" src="https://picsum.photos/seed/picsum/1200/900"> -->

@@ -61,15 +61,17 @@ class HomeController extends Controller
         return redirect('/manufacture/home');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        $manufacture = Manufacture::find($request->id);
+        return view('manufacture.delete', ['manufacture' => $manufacture]); 
+    }
+    
+    public function remove(Request $request)
+    {
+        $manufacture = Manufacture::find($request->id);
+        $manufacture->delete();
+        return redirect('/');
     }
 
 }
