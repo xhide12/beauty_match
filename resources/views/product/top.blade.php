@@ -1,11 +1,3 @@
-<!-- @extends('layouts.common')
-@section('content')
-
-<h1>商品ページです</h1>
-
-@endsection -->
-
-
 @extends('layouts.common')
 
 @section('product_index')
@@ -21,5 +13,3 @@
     @endforeach
     </table>
 @endsection
-
-@endextends
