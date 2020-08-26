@@ -13,6 +13,8 @@
 
       @include('parts.header')
       @yield('content')
+      @yield('product_add')
+      @yield('product_index')
       @include('parts.footer')      
       <script src="{{ mix('js/app.js') }}"></script>
 

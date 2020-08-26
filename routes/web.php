@@ -69,16 +69,22 @@ Route::get('/product/regiter_update/', function () {
     return view('product.register_update');
 });
 
-Route::get('/product/register/', function () {
-    return view('product.register');
-});
-
-Route::post('/product/store', 'ProductController@store');
+// Route::get('/product/register/', function () {
+//     return view('product.register');
+// });
 
 
-Route::get('/product/top/', function () {
-    return view('product.top');
-});
+Route::get('/product/register', 'ProductController@add')->name('product_add');
+Route::post('/product/register', 'ProductController@create')->name('product_create');
+
+Route::get('/product/top', 'ProductController@index')->name('product_index');
+// Route::get('/product/top/', function () {
+//     return view('product.top');
+// });
+
+
+
+
 
 //ここまで商品関係
 
