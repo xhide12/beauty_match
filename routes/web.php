@@ -32,9 +32,9 @@ Route::get('/manufacture/register_login/', function () {
     return view('manufacture.register_login');
 });
 
-Route::get('/manufacture/register/', function () {
-    return view('manufacture.register');
-});
+// Route::get('/manufacture/register/', function () {
+//     return view('manufacture.register');
+// });
 
 Route::get('/manufacture/withdraw_complete/', function () {
     return view('manufacture.withdraw_complete');
@@ -168,9 +168,9 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
     Route::get('/login', 'Manufacture\Auth\LoginController@showLoginForm')->name('manufacture.login');
-    Route::post('/login', 'Manufacture\Auth\LoginController@login')->name('manufacture.login');
+    Route::post('/login', 'Manufacture\Auth\LoginController@login')->name('manufacture.login2');
     Route::get('/register', 'Manufacture\Auth\RegisterController@showRegisterForm')->name('manufacture.register');
-    Route::post('/register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register');
+    Route::post('/register', 'Manufacture\Auth\RegisterController@register')->name('manufacture.register1');
     Route::get('/password/rest', 'Manufacture\Auth\ForgotPasswordController@showLinkRequestForm')->name('manufacture.password.request');
 });
 

@@ -29,7 +29,7 @@
                 <div class="card-header">{{ __('商品登録') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('product_create') }}">
+                    <form method="POST" action="{{ route('product_create') }}"  enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -106,7 +106,7 @@
                             <label for="image1" class="col-md-4 col-form-label text-md-right">{{ __('画像１') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image1" type="image1" class="form-control @error('image1') is-invalid @enderror" name="image1" required autocomplete="image1" value="aaa.jpg">
+                                <input id="image1" type="file" class="form-control @error('image1') is-invalid @enderror" name="image1" required autocomplete="image1" value="aaa.jpg">
 
                                 @error('image1')
                                     <span class="invalid-feedback" role="alert">

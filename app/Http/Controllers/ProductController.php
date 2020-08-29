@@ -36,7 +36,24 @@ class ProductController extends Controller
         $product->product_name = $request->product_name;
         $product->category = $request->category;
         $product->manufacture = $request->manufacture;
-        $product->image1 = $request->image1;
+
+        if($request->file('image1')){
+            $file = $request->file('image1');
+            $file_name = $request->file('image1')->getClientOriginalName();
+            $file_type = null;
+            var_dump($file);
+            if($file->getClientMimeType() == "image/png"){
+                $file_type = ".png";
+            }elseif($file->getClientMimeType() == "image/jpng"){
+                $file_type = ".jpg";
+            }
+        }
+
+        $filePath = $request->file("image1")->storeAs('public/uploaded_image', $file_name . $file_type);
+        $product->image1 = str_replace('public/', '', $filePath);
+
+
+        // $product->image1 = $request->image1;
         $product->image2 = $request->image2;
         $product->image3 = $request->image3;
         $product->image4 = $request->image4;
