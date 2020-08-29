@@ -77,6 +77,9 @@ Route::get('/product/top', 'ProductController@index')->name('product_index');
 Route::get('/product/edit', 'ProductController@edit')->name('product_edit');
 Route::post('/product/edit', 'ProductController@update')->name('product_update');
 
+Route::get('/product/delete', 'ProductController@delete')->name('product_delete');
+Route::post('/product/remove', 'ProductController@remove')->name('product_remove');
+
 
 //ここまで商品関係
 

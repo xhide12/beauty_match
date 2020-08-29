@@ -17,7 +17,7 @@ class ProductController extends Controller
     //     $product->manufacture = $request->manufacture;
     //     $product->image1 = $request->image1;
     //     $product->product_coment = $request->product_coment;
-    //     $bmproduct->composition = $request->composition;
+    //     $product->composition = $request->composition;
     //     $product->official_hp = $request->official_hp;      
     //     $product->official_instagram = $request->official_instagram;      
         
@@ -127,11 +127,24 @@ public function update(Request $request)
     $product->image3 = $request->image3;
     $product->image4 = $request->image4;
     $product->product_coment = $request->product_coment;
-    $bmproduct->composition = $request->composition;
+    $product->composition = $request->composition;
     $product->official_hp = $request->official_hp;      
     $product->official_instagram = $request->official_instagram;  
 
     $product->save();
+    return redirect('/product/top');
+}
+
+public function delete(Request $request)
+{
+    $product = Product::find($request->id);
+    return view('product.delete', ['product' => $product]); 
+}
+
+public function remove(Request $request)
+{
+    $product = Product::find($request->id);
+    $product->delete();
     return redirect('/product/top');
 }
 
