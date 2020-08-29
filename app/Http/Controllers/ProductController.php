@@ -37,9 +37,9 @@ class ProductController extends Controller
         $product->category = $request->category;
         $product->manufacture = $request->manufacture;
         $product->image1 = $request->image1;
-        $product->image1 = $request->image2;
-        $product->image1 = $request->image3;
-        $product->image1 = $request->image4;
+        $product->image2 = $request->image2;
+        $product->image3 = $request->image3;
+        $product->image4 = $request->image4;
         $product->product_coment = $request->product_coment;
         $product->composition = $request->composition;
         $product->official_hp = $request->official_hp;      
