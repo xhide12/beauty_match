@@ -15,7 +15,7 @@
                     @endif
 
                     <div class="table-responsive">
-                    <form action='{{ route('manufacture.update')}}' method="post">
+                    <form action="{{ route('manufacture.update') }}" method="post">
                     {{ csrf_field() }}
                         <table class="table table-striped text-nowrap">
                             <thead>

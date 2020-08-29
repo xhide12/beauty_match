@@ -120,7 +120,7 @@
                             <label for="image2" class="col-md-4 col-form-label text-md-right">{{ __('画像２') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image2" type="image2" class="form-control @error('image2') is-invalid @enderror" name="image2" required autocomplete="image2" value="bbb.jpg">
+                                <input id="image2" type="file" class="form-control @error('image2') is-invalid @enderror" name="image2" required autocomplete="image2" value="bbb.jpg">
 
                                 @error('image2')
                                     <span class="invalid-feedback" role="alert">
@@ -134,7 +134,7 @@
                             <label for="image3" class="col-md-4 col-form-label text-md-right">{{ __('画像３') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image3" type="image3" class="form-control @error('image3') is-invalid @enderror" name="image3" required autocomplete="image3" value="ccc.jpg">
+                                <input id="image3" type="file" class="form-control @error('image3') is-invalid @enderror" name="image3" required autocomplete="image3" value="ccc.jpg">
 
                                 @error('image3')
                                     <span class="invalid-feedback" role="alert">
@@ -149,7 +149,7 @@
                             <label for="image4" class="col-md-4 col-form-label text-md-right">{{ __('画像４') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image4" type="image4" class="form-control @error('image4') is-invalid @enderror" name="image4" required autocomplete="image4" value="ddd.jpg">
+                                <input id="image4" type="file" class="form-control @error('image4') is-invalid @enderror" name="image4" required autocomplete="image4" value="ddd.jpg">
 
                                 @error('image4')
                                     <span class="invalid-feedback" role="alert">

@@ -74,6 +74,9 @@ Route::post('/product/register', 'ProductController@create')->name('product_crea
 
 Route::get('/product/top', 'ProductController@index')->name('product_index');
 
+Route::get('/product/edit', 'ProductController@edit')->name('product_edit');
+Route::post('/product/edit', 'ProductController@update')->name('product_update');
+
 
 //ここまで商品関係
 

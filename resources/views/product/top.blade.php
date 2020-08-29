@@ -11,15 +11,22 @@
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
             <td>{{ $product->manufacture }}</td>
-            <td>{{ $product->image1 }}</td>
-            <td>{{ $product->image2 }}</td>
-            <td>{{ $product->image3 }}</td>
-            <td>{{ $product->image4 }}</td>
+            <td><img src="{{ asset('/storage/'.$product->image1)}}"></td>
+            <td><img src="{{ asset('/storage/'.$product->image2)}}"></td>
+            <td><img src="{{ asset('/storage/'.$product->image3)}}"></td>
+            <td><img src="{{ asset('/storage/'.$product->image4)}}"></td>
             <td>{{ $product->product_coment }}</td>
             <td>{{ $product->composition }}</td>
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
+            <td>
+            <!-- <button type="submit" class="btn btn-primary">{{ __('修正する') }}</button> -->
+            <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">
+            </td>
+
+
         </tr>
     @endforeach
     </table>
+
 @endsection
