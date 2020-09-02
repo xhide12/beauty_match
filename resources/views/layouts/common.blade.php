@@ -17,7 +17,7 @@
       @yield('product_index')
       @yield('product_edit')
       @yield('product_delete')
-      @include('parts.footer')      
+      @include('parts.footer')
       <script src="{{ mix('js/app.js') }}"></script>
 
     </body>
