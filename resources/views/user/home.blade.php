@@ -20,16 +20,16 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>{{__('name')}}</th>
-                                        <th>{{__('email')}}</th>
-                                        <th>{{__('line_id')}}</th>
-                                        <th>{{__('salon_name')}}</th>
-                                        <th>{{__('salon_url')}}</th>
-                                        <th>{{__('business_form')}}</th>
-                                        <th>{{__('monthly_sales')}}</th>
-                                        <th>{{__('living_area')}}</th>
-                                        <th>{{__('facebook_id')}}</th>
-                                        <th>{{__('instagram_id')}}</th>
+                                        <th>{{__('名前')}}</th>
+                                        <th>{{__('Eメール')}}</th>
+                                        <th>{{__('LINE ID')}}</th>
+                                        <th>{{__('サロン名')}}</th>
+                                        <th>{{__('サロンHP')}}</th>
+                                        <th>{{__('営業形態')}}</th>
+                                        <th>{{__('月間売上')}}</th>
+                                        <th>{{__('お住まいの地域')}}</th>
+                                        <th>{{__('FBアカウント')}}</th>
+                                        <th>{{__('Instagramアカウント')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

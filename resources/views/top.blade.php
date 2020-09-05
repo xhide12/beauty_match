@@ -42,5 +42,8 @@
 
 </div>
 
+@foreach($products as $product)
+  {{ $product->brand }}
+@endforeach
 
 @endsection

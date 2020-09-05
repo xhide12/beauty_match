@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -27,9 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::find(Auth::id());
-
         return view('user.home',compact('user'));
-
     }
 
     /**
