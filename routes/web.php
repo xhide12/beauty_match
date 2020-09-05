@@ -170,7 +170,7 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
 
-    Route::get('chat', 'ChatController@index')->name('chat.index');
+    Route::get('/chat', 'ChatController@index')->name('chat.index');
     Route::post('chat/create', 'ChatController@create')->name('chat.create');
 
     Route::get('/home', 'User\HomeController@index')->name('user.home');
