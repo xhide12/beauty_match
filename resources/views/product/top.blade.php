@@ -2,7 +2,7 @@
 
 @section('product_index')
 
-<div class="container">
+
     商品一覧<br>
     <table class="table"
         <thead>
@@ -35,6 +35,6 @@
     @endforeach
         </tbody>
     </table>
-  </div>
+
 
 @endsection
