@@ -26,51 +26,88 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{__('ブランド')}}</td>
+                                    <td>{{__('ブランド名')}}</td>
                                     <td><input type="text" name="brand" value="{{old( 'brand', $product->brand )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('product_name')}}</td>
+                                    <td>{{__('商品名')}}</td>
                                     <td><input type="text" name="product_name" value="{{old( 'product_name', $product->product_name )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('category')}}</td>
+                                    <td>{{__('商品カテゴリー')}}</td>
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('manufacture')}}</td>
+                                    <td>{{__('メーカー名')}}</td>
                                     <td><input type="text" name="manufacture" value="{{old( 'manufacture', $product->manufacture )}}"></td>
-                                </tr>    
+                                </tr>
+
                                 <tr>
-                                    <td>{{__('image1')}}</td>
-                                    <td><input type="text" name="image1" value="{{old( 'image1', $product->image1 )}}"></td>
-                                </tr>    
+                                    <td>{{__('画像１')}}</td>
+                                    <td>
+                                    <input id="image1" type="file" class="form-control @error('image1') is-invalid @enderror" name="image1" required autocomplete="image1" value="{{old( 'image1', $product->image1 )}}">
+
+                                    @error('image1')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </td>
+                                </tr>
+
                                 <tr>
-                                    <td>{{__('image2')}}</td>
-                                    <td><input type="text" name="image2" value="{{old( 'image2', $product->image2 )}}"></td>
-                                </tr>    
+                                    <td>{{__('画像２')}}</td>
+                                    <td>
+                                    <input id="image2" type="file" class="form-control @error('image2') is-invalid @enderror" name="image2" required autocomplete="image2" value="{{old( 'image1', $product->image2 )}}">
+
+                                    @error('image2')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </td>
+                                </tr>
+
                                 <tr>
-                                    <td>{{__('image3')}}</td>
-                                    <td><input type="text" name="image3" value="{{old( 'image3', $product->image3 )}}"></td>
-                                </tr>    
+                                    <td>{{__('画像３')}}</td>
+                                    <td>
+                                    <input id="image3" type="file" class="form-control @error('image3') is-invalid @enderror" name="image3" required autocomplete="image3" value="{{old( 'image3', $product->image3 )}}">
+
+                                    @error('image3')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </td>
+                                </tr>
+
                                 <tr>
-                                    <td>{{__('image4')}}</td>
-                                    <td><input type="text" name="image4" value="{{old( 'image4', $product->image4 )}}"></td>
-                                </tr>    
+                                    <td>{{__('画像４')}}</td>
+                                    <td>
+                                    <input id="image4" type="file" class="form-control @error('image4') is-invalid @enderror" name="image4" required autocomplete="image4" value="{{old( 'image4', $product->image4 )}}">
+
+                                    @error('image4')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </td>
+                                </tr>
+                                
                                 <tr>
-                                    <td>{{__('product_coment')}}</td>
+                                    <td>{{__('商品説明')}}</td>
                                     <td><input type="text" name="product_coment" value="{{old( 'product_coment', $product->product_coment )}}"></td>
                                 </tr> 
                                 <tr>
-                                    <td>{{__('composition')}}</td>
+                                    <td>{{__('成分・原材料')}}</td>
                                     <td><input type="text" name="composition" value="{{old( 'composition', $product->composition )}}"></td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('official_hp')}}</td>
+                                    <td>{{__('オフィシャルHP')}}</td>
                                     <td><input type="text" name="official_hp" value="{{old( 'official_hp', $product->official_hp )}}"></td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('official_instagram')}}</td>
+                                    <td>{{__('オフィシャルInstagram')}}</td>
                                     <td><input type="text" name="official_instagram" value="{{old( 'official_instagram', $product->official_instagram )}}"></td>
                                 </tr>   
                             </tbody>
