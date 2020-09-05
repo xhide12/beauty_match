@@ -14,8 +14,7 @@ class TopController extends Controller
     public function index(){
 
         $products = Product::with('user')->get();
-        return view('top',compact('user', 'products'));
+        return view('top',compact('products'));
 
-        // return view('top');
     }
 }

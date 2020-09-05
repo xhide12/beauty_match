@@ -154,6 +154,11 @@ Route::get('/password/reset/', function () {
 // Route::get('/', 'User\Auth\LoginController@index')->name('home');
 Route::get('/', 'TopController@index');
 
+
+
+
+
+
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
@@ -164,6 +169,10 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
+
+    Route::get('chat', 'ChatController@index')->name('chat.index');
+    Route::post('chat/create', 'ChatController@create')->name('chat.create');
+
     Route::get('/home', 'User\HomeController@index')->name('user.home');
     Route::post('/logout', 'User\Auth\LoginController@logout')->name('user.logout');
     Route::get('/edit', 'User\HomeController@edit')->name('user.edit');
