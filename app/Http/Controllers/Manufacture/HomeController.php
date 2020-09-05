@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Manufacture;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
         $manufacture = Manufacture::find(Auth::id());
-        return view('manufacture.home',compact('manufacture'));
+        $products = Product::with('manufacture')->get();
+        return view('manufacture.home',compact('manufacture', 'products'));
+
+
+        
     }
 
     /**
