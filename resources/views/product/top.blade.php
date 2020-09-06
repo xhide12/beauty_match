@@ -9,7 +9,7 @@
         <tr><th>ブランド名</th><th>商品名</th><th>商品カテゴリー</th><th>サイズ</th><th>メーカー名</th><th>画像１</th><th>画像２</th><th>画像３</th><th>画像４</th><th>商品説明</th><th>成分・原材料</th><th>オフィシャルHP</th><th>オフィシャルInstagram</th></tr>
         </thead>
         <tbody>
-  
+        @foreach($products as $product)
         <tr>
             <td>{{ $product->brand }}</td>
             <td>{{ $product->product_name }}</td>
@@ -25,11 +25,12 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-            <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">紹介する</a>
+            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">紹介する</a>
             </td>
 
 
         </tr>
+        @endforeach
         </tbody>
     </table>
 

@@ -80,7 +80,7 @@ Route::post('/product/edit', 'ProductController@update')->name('product_update')
 Route::get('/product/delete', 'ProductController@delete')->name('product_delete');
 Route::post('/product/remove', 'ProductController@remove')->name('product_remove');
 
-Route::get('/product/show/', 'ProductController@show')->name('product_show');
+Route::get('/product/show', 'ProductController@show')->name('product_show');
 
 //ここまで商品関係
 

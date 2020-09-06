@@ -1,7 +1,7 @@
 @extends('layouts.user.app')
 
-@section('product_index')
 
+@section('product_show')
 
     商品一覧<br>
     <table class="table"

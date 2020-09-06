@@ -102,8 +102,9 @@ class ProductController extends Controller
         return redirect('/product/top');
     }
 
-    public function show(Product $product)
+    public function show(Request $request)
     {
+        $product = Product::find($request->id);
         return view('product.show', ['product' => $product]);
     }
 

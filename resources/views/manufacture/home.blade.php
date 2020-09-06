@@ -86,14 +86,14 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-            <!-- <button type="submit" class="btn btn-primary">{{ __('修正する') }}</button> -->
+
             <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">変更</a>
             <a type="submit" class="btn btn-primary" href="{{ route('product_delete') }}?id={{ $product->id }}">削除</a>
             </td>
 
 
         </tr>
-    @endforeach
+            @endforeach
         </tbody>
     </table>
   </div>

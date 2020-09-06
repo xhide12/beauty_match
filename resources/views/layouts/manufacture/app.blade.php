@@ -76,6 +76,19 @@
         
         <main class="py-4">
             @yield('content')
+            <!-- @include('parts.header') -->
+            @yield('product_add')
+            @yield('product_index')
+            @yield('product_show')
+            @yield('product_edit')
+            @yield('product_delete')
+            @yield('user.home')
+            @yield('user.logout')
+            @yield('user.edit')
+            @yield('user.update')
+            @yield('user_delete')
+            @yield('user_remove')
+            @include('parts.footer')
         </main>
     </div>
 </body>

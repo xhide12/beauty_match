@@ -66,7 +66,6 @@
             <td>{{ $product->official_instagram }}</td>
             <td>
 
-            <!-- <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">変更</a> -->
             <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">商品詳細</a>
             </td>
 

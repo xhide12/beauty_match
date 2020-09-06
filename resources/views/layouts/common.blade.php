@@ -15,9 +15,11 @@
       @yield('content')
       @yield('product_add')
       @yield('product_index')
+      @yield('product_show')
       @yield('product_edit')
       @yield('product_delete')
       @include('parts.footer')
+      
       <script src="{{ mix('js/app.js') }}"></script>
 
     </body>
