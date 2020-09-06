@@ -65,9 +65,9 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-            <!-- <button type="submit" class="btn btn-primary">{{ __('修正する') }}</button> -->
+
             <!-- <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">変更</a> -->
-            <a type="submit" class="btn btn-primary" href="{{ route('product_delete') }}?id={{ $product->id }}">紹介する</a>
+            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">商品詳細</a>
             </td>
 
 

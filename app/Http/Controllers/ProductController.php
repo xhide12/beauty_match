@@ -102,6 +102,11 @@ class ProductController extends Controller
         return redirect('/product/top');
     }
 
+    public function show(Product $product)
+    {
+        return view('product.show', ['product' => $product]);
+    }
+
     public function index()
     {
         $products = Product::all();

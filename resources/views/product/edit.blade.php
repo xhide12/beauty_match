@@ -36,7 +36,11 @@
                                 <tr>
                                     <td>{{__('商品カテゴリー')}}</td>
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
-                                </tr>    
+                                </tr>
+                                <tr>
+                                    <td>{{__('サイズ')}}</td>
+                                    <td><input type="text" name="size"" value="{{old( 'size', $product->size )}}"></td>
+                                </tr>
                                 <tr>
                                     <td>{{__('メーカー名')}}</td>
                                     <td><input type="text" name="manufacture" value="{{old( 'manufacture', $product->manufacture )}}"></td>
