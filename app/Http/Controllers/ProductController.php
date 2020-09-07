@@ -7,24 +7,6 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    //
-    // public function store(Request $request){
-    //     $product = new Product();
-        
-    //     $product->brand = $request->brand;
-    //     $product->product_name = $request->product_name;
-    //     $product->category = $request->category;
-    //     $product->manufacture = $request->manufacture;
-    //     $product->image1 = $request->image1;
-    //     $product->product_coment = $request->product_coment;
-    //     $product->composition = $request->composition;
-    //     $product->official_hp = $request->official_hp;      
-    //     $product->official_instagram = $request->official_instagram;      
-        
-    //     $bm->save();
-    //     return redirect('/product/top');
-    // }
-
    public function add()
    {
     return view('product.register');
