@@ -21,4 +21,17 @@ class Introduction extends Model
     protected $fillable = [
         'user_id', 'manufacture_id', 'product_id', 'application_time', 'judgement'
     ];
+
+    public function manufacture()
+    {
+        return $this->belongsTo('App\Models\Manufacture');
+    }
+
+    
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+
 }

@@ -21,4 +21,17 @@ class Chat extends Model
     protected $fillable = [
         'user_chat', 'manufacture_chat', 'text'
     ];
+
+    public function manufacture()
+    {
+        return $this->belongsTo('App\Models\Manufacture');
+    }
+
+    
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+
 }
