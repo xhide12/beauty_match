@@ -25,9 +25,13 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-            <a type="submit" class="btn btn-primary" href="{{ route('chat.index') }}?id={{ $product->id }}">紹介</a>
-            </td>
-
+            <form method="post">
+            @csrf
+                <input type="hidden" >
+                <input type="hidden" >
+                <a type="submit" class="btn btn-primary" href="{{ route('chat.index') }}?id={{ $product->id }}">紹介したい</a>
+                </td>
+            </form>
 
         </tr>
         </tbody>
