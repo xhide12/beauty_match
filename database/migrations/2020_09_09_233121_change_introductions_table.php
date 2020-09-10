@@ -34,7 +34,7 @@ class ChangeIntroductionsTable extends Migration
             $table->string('manufacture_id')->change();
             $table->string('product_id')->change();
             $table->string('application_time')->change();
-            $table->string('judgment')->change();
+            $table->string('judgement')->change();
         });
     }
 }
