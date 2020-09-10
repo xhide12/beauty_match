@@ -14,8 +14,11 @@ class ChangeIntroductionsTable extends Migration
     public function up()
     {
         Schema::table('introductions', function (Blueprint $table) {
-            $table->integer('user_id')->change();
-            $table->integer('manufacture_id')->change();
+            $table->integer('user_id')->length(50)->nullable()->change();
+            $table->integer('manufacture_id')->length(50)->nullable()->change();
+            $table->integer('product_id')->length(50)->nullable()->change();
+            $table->dateTime('application_time')->change();
+            $table->integer('judgement')->length(50)->change();
         });
     }
 
@@ -29,6 +32,9 @@ class ChangeIntroductionsTable extends Migration
         Schema::table('introductions', function (Blueprint $table) {
             $table->string('user_id')->change();
             $table->string('manufacture_id')->change();
+            $table->string('product_id')->change();
+            $table->string('application_time')->change();
+            $table->string('judgment')->change();
         });
     }
 }

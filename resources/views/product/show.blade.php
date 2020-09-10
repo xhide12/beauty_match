@@ -25,7 +25,7 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-            <form method="post">
+            <form method="post" action="introduction_form">
             @csrf
                 <input type="hidden" >
                 <input type="hidden" >

@@ -13,6 +13,10 @@ class CreateIntroductionsTable extends Migration
      */
     public function up()
     {
+        if (Schema::hasTable('introductions')) {
+            // テーブルが存在していればリターン
+            return;
+        }
         Schema::create('introductions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('user_id');
@@ -31,6 +35,6 @@ class CreateIntroductionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('introduce');
+        Schema::dropIfExists('introductions');
     }
 }

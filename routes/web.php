@@ -180,6 +180,9 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
     Route::post('/edit', 'User\HomeController@update')->name('user.update');
     Route::get('/delete', 'User\HomeController@delete')->name('user_delete');
     Route::post('/remove', 'User\HomeController@remove')->name('user_remove'); 
+
+    Route::post('/product/show', 'IntroductionController@create')->name('intoroduction_form');
+
 });
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'guest:manufacture'], function() {
