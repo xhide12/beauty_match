@@ -25,11 +25,12 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
+            
             <form method="post" action="introduction_form">
             @csrf
-                <input type="hidden" >
-                <input type="hidden" >
-                <a type="submit" class="btn btn-primary" href="{{ route('chat.index') }}?id={{ $product->id }}">紹介したい</a>
+            <input type='hidden' name='user_id' value="{{ Auth::guard('user')->user()->id }}"><br>
+
+            <a type="submit" class="btn btn-primary" href="{{ route('chat.index') }}?id={{ $product->id }}">紹介したい</a>
                 </td>
             </form>
 
