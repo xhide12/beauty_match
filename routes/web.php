@@ -87,9 +87,7 @@ Route::get('/product/show', 'ProductController@show')->name('product_show');
 
 //ここからユーザー関係
 
-Route::get('/user/introduce/', function () {
-    return view('user.introduce');
-});
+
 
 Route::get('/user/register_complete/', function () {
     return view('user.register_complete');
@@ -167,6 +165,9 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
     Route::post('/edit', 'Manufacture\HomeController@update')->name('manufacture.update');
     Route::get('/delete', 'Manufacture\HomeController@delete')->name('manufacture_delete');
     Route::post('/remove', 'Manufacture\HomeController@remove')->name('manufacture_remove'); 
+
+    Route::post('/home/introduction', 'Manufacture\HomeController@judge')->name('manufacture.home');
+
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
@@ -181,7 +182,11 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
     Route::get('/delete', 'User\HomeController@delete')->name('user_delete');
     Route::post('/remove', 'User\HomeController@remove')->name('user_remove'); 
 
-    Route::post('/product/show', 'IntroductionController@store')->name('intoroduction_form');
+    Route::post('/product/show', 'IntroductionController@store')->name('introduction_form');
+
+    Route::get('/user/introduction/', function () {
+        return view('user.introduction');
+    })->name('user.introduction');
 
 });
 

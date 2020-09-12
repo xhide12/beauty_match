@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Manufacture;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
+use App\Models\Introduction;
 
 class HomeController extends Controller
 {
@@ -27,14 +28,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-
         $manufacture = Manufacture::find(Auth::id());
         $products = Product::with('manufacture')->get();
-        return view('manufacture.home',compact('manufacture', 'products'));
+        $introductions = Introduction::with('manufacture')->get();
+        return view('manufacture.home',compact('manufacture', 'products','introductions'));
+    }
 
-
-        
+    public function judge(Request $request)
+    {
+        $introduction = Introduction::find($request->introduction_id);
+        $introduction->judgement = $request->judgement;
+        $introduction->update();
+        return redirect('/manufacture/home');
     }
 
     /**

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Introduction;
+use Auth;
 
 use App\Models\User;
 use App\Models\Manufacture;
@@ -31,16 +32,18 @@ class IntroductionController extends Controller
     {
 
       // Eloquentモデル
-      $introduction = new Introduction;
-      $introduction->introduction = $request->introduction;
-      $introduction->user_id = $request->user_id;
-      $introduction->manufacture_id = $request->manufacture_id;
+      $introduction = new Introduction();
+      $datetime = date_create()->format('Y-m-d H:i:s');
+
+      $introduction->user_id = Auth::guard('user')->user()->id;
+
+      $introduction->manufacture_id = Product::find($request->product_id)->manufacture->id;
       $introduction->product_id = $request->product_id;
-      $introduction->application_time = $request->application_time;
-      $introduction->judgement = $request->judgement;
+      $introduction->application_time = $datetime;
+      $introduction->judgement = 3;
       $introduction->save();
       // ルーティング「chat.index」にリクエスト送信（一覧ページに移動）
-      return redirect()->route('chat.index');
+      return redirect()->route('user.introduction');
     }
 
 }

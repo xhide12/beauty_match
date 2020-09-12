@@ -55,7 +55,7 @@
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
-            <td>{{ $product->manufacture }}</td>
+            <td>{{ $product->manufacture_id }}</td>
             <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>

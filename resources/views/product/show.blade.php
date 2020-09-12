@@ -15,7 +15,7 @@
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
-            <td>{{ $product->manufacture }}</td>
+            <td>{{ $product->manufacture_id }}</td>
             <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>
@@ -26,11 +26,11 @@
             <td>{{ $product->official_instagram }}</td>
             <td>
             
-            <form method="post" action="introduction_form">
+            <form method="post" action="{{ route('introduction_form') }}">
             @csrf
-            <input type='hidden' name='user_id' value="{{ Auth::guard('user')->user()->id }}"><br>
 
-            <a type="submit" class="btn btn-primary" href="{{ route('chat.index') }}?id={{ $product->id }}">紹介したい</a>
+            <input type='hidden' name='product_id' value="{{ $product->id }}"><br>
+            <button type="submit" class="btn btn-primary">紹介したい</button>
                 </td>
             </form>
 

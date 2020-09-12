@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div>
 商品一覧<br>
     <table class="table"
         <thead>
@@ -76,7 +76,7 @@
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
-            <td>{{ $product->manufacture }}</td>
+            <td>{{ $product->manufacture_id }}</td>
             <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>
@@ -93,6 +93,46 @@
 
 
         </tr>
+            @endforeach
+        </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+申請一覧<br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ユーザー名</th>
+                <th>商品id</th>
+                <th>申請日時</th>
+                <th>判定</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($introductions as $introduction)
+        <tr>
+            <td>{{ $introduction->user_id }}</td>
+            <td>{{ $introduction->product_id }}</td>
+            <td>{{ $introduction->application_time }}</td>
+            <td>{{ $introduction->judgement }}</td>
+         </tr>
+
+         <td>
+         <form method="post" action="home/introduction">
+         @csrf
+         <input type="hidden" name="judgement" value="1">
+         <input type="hidden" name="introduction_id" value="{{ $introduction->id}}">
+        <button type="submit" class="btn btn-primary" href="">承認</button>
+        </form>
+
+        <form method="post" action="home/introduction">
+        @csrf
+        <input type="hidden" name="judgement" value="2">
+        <input type="hidden" name="introduction_id" value="{{ $introduction->id }}">
+        <button type="submit" class="btn btn-primary" href="">却下</button>
+        </form>
+        </td>
             @endforeach
         </tbody>
     </table>
