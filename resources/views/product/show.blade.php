@@ -24,8 +24,8 @@
             <td>{{ $product->composition }}</td>
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
+
             <td>
-            
             <form method="post" action="{{ route('introduction_form') }}">
             @csrf
 
