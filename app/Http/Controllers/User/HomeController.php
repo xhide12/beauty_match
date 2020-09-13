@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
+use App\Models\Introduction;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,9 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::find(Auth::id());
-        return view('user.home',compact('user'));
+        $products = Product::with('user')->get();
+        $introductions = Introduction::with('user')->get();
+        return view('user.home',compact('user', 'products','introductions'));
     }
 
     /**

@@ -159,6 +159,10 @@ Route::get('/', 'TopController@index');
 
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
+
+    Route::get('/chat', 'ChatController@index')->name('chat.index');
+    Route::post('chat/create', 'ChatController@create')->name('chat.create');
+
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
     Route::get('/edit', 'Manufacture\HomeController@edit')->name('manufacture.edit');
@@ -184,7 +188,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
 
     Route::post('/product/show', 'IntroductionController@store')->name('introduction_form');
 
-    Route::get('/user/introduction/', function () {
+    Route::get('/introduction', function () {
         return view('user.introduction');
     })->name('user.introduction');
 

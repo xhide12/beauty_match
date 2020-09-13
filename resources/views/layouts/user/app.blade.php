@@ -76,6 +76,7 @@
         <main class="py-4">
             @yield('content')
             <!-- @include('parts.header') -->
+            @yield('chat.index')    
             @yield('product_add')
             @yield('product_index')
             @yield('product_show')

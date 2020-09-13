@@ -86,9 +86,10 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
             <td>
-
-            <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">変更</a>
-            <a type="submit" class="btn btn-primary" href="{{ route('product_delete') }}?id={{ $product->id }}">削除</a>
+            <button type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">変更</button>
+            </td>
+            <td>
+            <button type="submit" class="btn btn-primary" href="{{ route('product_delete') }}?id={{ $product->id }}">削除</button>
             </td>
 
 
@@ -116,23 +117,33 @@
             <td>{{ $introduction->product_id }}</td>
             <td>{{ $introduction->application_time }}</td>
             <td>{{ $introduction->judgement }}</td>
-         </tr>
-
          <td>
-         <form method="post" action="home/introduction">
-         @csrf
-         <input type="hidden" name="judgement" value="1">
-         <input type="hidden" name="introduction_id" value="{{ $introduction->id}}">
-        <button type="submit" class="btn btn-primary" href="">承認</button>
-        </form>
-
-        <form method="post" action="home/introduction">
-        @csrf
-        <input type="hidden" name="judgement" value="2">
-        <input type="hidden" name="introduction_id" value="{{ $introduction->id }}">
-        <button type="submit" class="btn btn-primary" href="">却下</button>
-        </form>
+            <form method="post" action="home/introduction">
+            @csrf
+            <input type="hidden" name="judgement" value="1">
+            <input type="hidden" name="introduction_id" value="{{ $introduction->id}}">
+            <button type="submit" class="btn btn-primary" href="">承認</button>
+            </form>
         </td>
+        <td>
+            <form method="post" action="home/introduction">
+            @csrf
+            <input type="hidden" name="judgement" value="2">
+            <input type="hidden" name="introduction_id" value="{{ $introduction->id }}">
+            <button type="submit" class="btn btn-primary" href="">却下</button>
+            </form>
+        </td>
+        @if ( $introduction->judgement === 1)
+        <td>
+            <form method="get" action="{{ route('chat.index') }}?id={{ $introduction->id }}">
+            @csrf
+            <input type="hidden" name="introduction_id" value="{{ $introduction->id }}">
+            <button type="submit" class="btn btn-primary" href="">チャットへ</button>
+            </form>
+        </td>
+        @endif
+
+        </tr>
             @endforeach
         </tbody>
     </table>

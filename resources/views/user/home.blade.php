@@ -60,4 +60,44 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+申請一覧<br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>商品id</th>
+                <th>申請日時</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($introductions as $introduction)
+        <tr>
+            <td>{{ $introduction->product_id }}</td>
+            <td>{{ $introduction->application_time }}</td>
+
+        @if ( $introduction->judgement === 1)
+        <td>
+         <form method="get" action="{{ route('chat.index') }}?id={{ $introduction->id }}">
+         @csrf
+         <input type="hidden" name="introduction_id" value="{{ $introduction->id}}">
+        <button type="submit" class="btn btn-primary" href="">チャットへ</button>
+        </form>
+        </td>
+        @elseif( $introduction->judgement === 2)
+        <td>
+            今回はごめんなさい
+        </td>
+        @else
+        <td>
+            承認待ちです
+        </td>
+        @endif
+
+        </tr>
+            @endforeach
+        </tbody>
+    </table>
+  </div>
+
 @endsection

@@ -82,6 +82,7 @@
             @yield('product_show')
             @yield('product_edit')
             @yield('product_delete')
+            @yield('chat.index')            
             @yield('user.home')
             @yield('user.logout')
             @yield('user.edit')

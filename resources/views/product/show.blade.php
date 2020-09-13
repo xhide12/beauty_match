@@ -25,15 +25,17 @@
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
 
+            @unless (Auth::guard('user')->check())
+            <td>ログインしたら紹介できるよ</td>
+            @else
             <td>
             <form method="post" action="{{ route('introduction_form') }}">
             @csrf
-
             <input type='hidden' name='product_id' value="{{ $product->id }}"><br>
             <button type="submit" class="btn btn-primary">紹介したい</button>
-                </td>
             </form>
-
+            </td>
+            @endif
         </tr>
         </tbody>
     </table>

@@ -1,4 +1,8 @@
-@extends('layouts.user.app')
+@if(Auth::guard('user')->check())
+    @extends('layouts.user.app')
+@elseif (Auth::guard('manufacture')->check())
+    @extends('layouts.manufacture.app')
+@endif
 
 @section('content')
     <div class="container">
