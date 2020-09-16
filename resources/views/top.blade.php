@@ -2,10 +2,32 @@
 
 @section('content')
 <div class="container">
-  <h1>TOPページです</h1>
-  <!-- <img class="img-fluid" src="https://picsum.photos/seed/picsum/1200/900"> -->
 
-  <img src="image/main.jpg" alt="メイン画像" width="1110" height="300" object-fit="contain">
+  <div id="carousel-2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-2" data-slide-to="1"></li>
+    <li data-target="#carousel-2" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <a href="">
+        <img src="image/top-image-1.png" alt="responsive image" class="d-block img-fluid">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="">
+        <img src="image/top-image-2.png" alt="responsive image" class="d-block img-fluid">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="">
+        <img src="image/top-image-3.png" alt="responsive image" class="d-block img-fluid">
+      </a>
+    </div>
+  </div>
+</div>
+
 
     <div class="card-deck">
     <div class="card">
@@ -42,7 +64,7 @@
 
 </div>
 
-
+<div class="container">
     商品一覧<br>
     <table class="table"
         <thead>
@@ -74,6 +96,6 @@
     @endforeach
         </tbody>
     </table>
-
+    </div>
 
 @endsection
