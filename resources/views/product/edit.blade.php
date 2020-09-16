@@ -43,7 +43,7 @@
                                 </tr>
                                 <tr>
                                     <td>{{__('メーカー名')}}</td>
-                                    <td><input type="text" name="manufacture" value="{{old( 'manufacture', $product->manufacture )}}"></td>
+                                    <td><input type="text" name="manufacture_id" value="{{old( 'manufacture', $product->manufacture_id )}}"></td>
                                 </tr>
 
                                 <tr>

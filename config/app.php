@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'beauty match'),
+    'name' => env('APP_NAME', 'beautymatch'),
 
     /*
     |--------------------------------------------------------------------------

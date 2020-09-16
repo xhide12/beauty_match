@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div>
 商品一覧<br>
     <table class="table"
         <thead>
