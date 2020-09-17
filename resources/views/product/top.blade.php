@@ -3,15 +3,30 @@
 @section('product_index')
 
 
+<div class="container">
     商品一覧<br>
-    <table class="table"
+    <table class="table">
         <thead>
-        <tr><th>ブランド名</th><th>商品名</th><th>商品カテゴリー</th><th>サイズ</th><th>メーカー名</th><th>画像１</th><th>画像２</th><th>画像３</th><th>画像４</th><th>商品説明</th><th>成分・原材料</th><th>オフィシャルHP</th><th>オフィシャルInstagram</th></tr>
+        <tr>
+            <th nowrap >ブランド名</th>
+            <th nowrap >商品名</th>
+            <th nowrap >商品カテゴリー</th>
+            <th nowrap >サイズ</th>
+            <th nowrap >メーカー名</th>
+            <th nowrap >画像１</th>
+            <th nowrap >画像２</th>
+            <th nowrap >画像３</th>
+            <th nowrap >画像４</th>
+            <th nowrap >商品説明</th>
+            <th nowrap >成分・原材料</th>
+            <th nowrap >オフィシャルHP</th>
+            <th nowrap >オフィシャルInstagram</th>
+        </tr>
         </thead>
         <tbody>
         @foreach($products as $product)
         <tr>
-            <td>{{ $product->brand }}</td>
+            <td >{{ $product->brand }}</td>
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
@@ -33,6 +48,6 @@
         @endforeach
         </tbody>
     </table>
-
+    </div>
 
 @endsection
