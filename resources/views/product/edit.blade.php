@@ -1,4 +1,4 @@
-@extends('layouts.common')
+@extends('layouts.manufacture.app')
 
 @section('product_edit')
 <div class="container">

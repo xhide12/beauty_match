@@ -69,16 +69,11 @@ Route::get('/product/regiter_update/', function () {
     return view('product.register_update');
 });
 
-Route::get('/product/register', 'ProductController@add')->name('product_add');
-Route::post('/product/register', 'ProductController@create')->name('product_create');
+
 
 Route::get('/product/top', 'ProductController@index')->name('product_index');
 
-Route::get('/product/edit', 'ProductController@edit')->name('product_edit');
-Route::post('/product/edit', 'ProductController@update')->name('product_update');
 
-Route::get('/product/delete', 'ProductController@delete')->name('product_delete');
-Route::post('/product/remove', 'ProductController@remove')->name('product_remove');
 
 Route::get('/product/show', 'ProductController@show')->name('product_show');
 
@@ -171,6 +166,15 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
     Route::post('/remove', 'Manufacture\HomeController@remove')->name('manufacture_remove'); 
 
     Route::post('/home/introduction', 'Manufacture\HomeController@judge')->name('manufacture.home');
+
+    Route::get('/product/register', 'ProductController@add')->name('product_add');
+    Route::post('/product/register', 'ProductController@create')->name('product_create');
+
+    Route::get('/product/edit', 'ProductController@edit')->name('product_edit');
+    Route::post('/product/edit', 'ProductController@update')->name('product_update');
+    
+    Route::get('/product/delete', 'ProductController@delete')->name('product_delete');
+    Route::post('/product/remove', 'ProductController@remove')->name('product_remove');
 
 });
 

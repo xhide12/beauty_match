@@ -42,6 +42,8 @@
                                         {{ __('修正する') }}
                             </button>
                             <a class="btn btn-danger"  href="{{ route('manufacture_delete') }}?id={{ $manufacture->id }}">退会する</a>
+
+                            <a type="submit"  class="btn btn-secondary center-block"  href="{{ route('product_create') }}">商品登録</a>
                         </form>
                     </div>
                 </div>
@@ -50,9 +52,12 @@
     </div>
 </div>
 
+
+
+
 <div class="container">
 商品一覧<br>
-    <table class="table"
+    <table class="table">
         <thead>
             <tr>
                 <th nowrap>ブランド名</th>
