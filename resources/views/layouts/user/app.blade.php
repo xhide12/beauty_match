@@ -26,12 +26,12 @@
         <nav class="navbar navbar-expand-md navbar-light bg-danger shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <!-- {{ config('app.name', 'Beauty Match') }} -->
-                <img src="image/logo.png" alt="logo">
+                    {{ config('app.name', 'Beauty Match') }}
+                <!-- <img src="image/logo.png" alt="logo"> -->
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -75,14 +75,25 @@
             </div>
         </nav>
         <main class="py-4">
-            @yield('content')
+        @yield('content')
             <!-- @include('parts.header') -->
-            @yield('chat.index')    
             @yield('product_add')
             @yield('product_index')
             @yield('product_show')
             @yield('product_edit')
             @yield('product_delete')
+            @yield('chat.index')            
+            @yield('user.home')
+            @yield('user.logout')
+            @yield('user.edit')
+            @yield('user.edit')
+            <!-- @yield('user.update') -->
+            @yield('user_delete')
+            @yield('user_remove')
+            @yield('manufacture.home')
+            @yield('manufacture.edit')
+            @yield('manufacture_delete')
+            @yield('user.introduction')
             @include('parts.footer')
         </main>
     </div>

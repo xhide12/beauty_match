@@ -66,9 +66,9 @@
 
 <div class="container">
     商品一覧<br>
-    <table class="table"
+    <table class="table" >
         <thead>
-        <tr><th>ブランド名</th><th>商品名</th><th>商品カテゴリー</th><th>サイズ</th><th>メーカー名</th><th>画像１</th><th>画像２</th><th>画像３</th><th>画像４</th><th>商品説明</th><th>成分・原材料</th><th>オフィシャルHP</th><th>オフィシャルInstagram</th></tr>
+        <tr><th nowrap>ブランド名</th><th nowrap>商品名</th><th nowrap>カテゴリー</th><th nowrap>サイズ</th><th nowrap>メーカー名</th><th nowrap>画像１</th><th nowrap>画像２</th><th nowrap>画像３</th><th nowrap>画像４</th><th nowrap>商品説明</th><th nowrap>成分・原材料</th><th nowrap>公式サイト</th><th nowrap>Instagram</th></tr>
         </thead>
         <tbody>
     @foreach($products as $product)
@@ -86,12 +86,9 @@
             <td>{{ $product->composition }}</td>
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
-            <td>
-
-            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">商品詳細</a>
+            <td nowrap>
+            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">詳細</a>
             </td>
-
-
         </tr>
     @endforeach
         </tbody>
