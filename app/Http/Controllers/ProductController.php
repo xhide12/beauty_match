@@ -17,7 +17,8 @@ class ProductController extends Controller
         $product->brand = $request->brand;
         $product->product_name = $request->product_name;
         $product->category = $request->category;
-        $product->manufacture = $request->manufacture;
+        $product->size = $request->size;
+        $product->manufacture_id = $request->manufacture_id;
 
         if($request->file('image1')){
             $file = $request->file('image1');
@@ -109,7 +110,8 @@ public function update(Request $request)
     $product->brand = $request->brand;
     $product->product_name = $request->product_name;
     $product->category = $request->category;
-    $product->manufacture = $request->manufacture;
+    $product->size = $request->size;
+    $product->manufacture_id = $request->manufacture_id;
     $product->image1 = $request->image1;
     $product->image2 = $request->image2;
     $product->image3 = $request->image3;
@@ -120,7 +122,7 @@ public function update(Request $request)
     $product->official_instagram = $request->official_instagram;  
 
     $product->save();
-    return redirect('/product/top');
+    return redirect('/manufacture/home');
 }
 
 public function delete(Request $request)

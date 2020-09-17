@@ -3,25 +3,6 @@
 @section('content')
 <h1>商品登録</h1>
 
-<!-- <form action="{{ route('product_create') }}" method="post">
-@csrf
-  <input type="text" name="brand">
-  <input type="text" name="product_name">
-  <input type="text" name="category">
-  <input type="text" name="size">
-  <input type="text" name="manufacture">
-  <input type="text" name="image1" value="aaa.jpg">
-  <input type="text" name="image2" value="bbb.jpg">
-  <input type="text" name="image3" value="ccc.jpg">
-  <input type="text" name="image4" value="ddd.jpg">
-  <input type="text" name="product_coment">
-  <input type="text" name="composition">
-  <input type="text" name="official_hp">
-  <input type="text" name="official_instagram">
-  <button type="submit">送信</button>
-
-</form> -->
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -89,12 +70,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="manufacture" class="col-md-4 col-form-label text-md-right">{{ __('メーカー名') }}</label>
+                            <label for="manufacture_id" class="col-md-4 col-form-label text-md-right">{{ __('メーカー名') }}</label>
 
                             <div class="col-md-6">
-                                <input id="manufacture" type="manufacture" class="form-control @error('manufacture') is-invalid @enderror" name="manufacture" value="{{ old('manufacture') }}" required autocomplete="manufacture">
+                                <input id="manufacture_id" type="manufacture_id" class="form-control @error('manufacture_id') is-invalid @enderror" name="manufacture_id" value="{{ old('manufacture_id') }}" required autocomplete="manufacture_id">
 
-                                @error('manufacture')
+                                @error('manufacture_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -20,7 +20,7 @@
             <th nowrap >商品説明</th>
             <th nowrap >成分・原材料</th>
             <th nowrap >オフィシャルHP</th>
-            <th nowrap >オフィシャルInstagram</th>
+            <th nowrap  >オフィシャルInstagram</th>
         </tr>
         </thead>
         <tbody>
@@ -30,7 +30,7 @@
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
-            <td>{{ $product->manufacture }}</td>
+            <td>{{ $product->manufacture_id }}</td>
             <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>
@@ -39,8 +39,8 @@
             <td>{{ $product->composition }}</td>
             <td>{{ $product->official_hp }}</td>
             <td>{{ $product->official_instagram }}</td>
-            <td>
-            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">商品詳細</a>
+            <td nowrap>
+            <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">詳細</a>
             </td>
 
 
