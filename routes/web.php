@@ -155,8 +155,8 @@ Route::get('/', 'TopController@index');
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
 
-    Route::get('/chat', 'ChatController@index')->name('chat.index');
-    Route::post('chat/create', 'ChatController@create')->name('chat.create');
+    Route::get('/chat', 'Manufacture\HomeController@chat_index')->name('manufacture_chat.index');
+    Route::post('chat/create', 'Manufacture\HomeController@chat_create')->name('manufacture_chat.create');
 
     Route::get('/home', 'Manufacture\HomeController@index')->name('manufacture.home');
     Route::post('/logout', 'Manufacture\Auth\LoginController@logout')->name('manufacture.logout');
@@ -180,8 +180,8 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function(){
 
-    Route::get('/chat', 'ChatController@index')->name('chat.index');
-    Route::post('chat/create', 'ChatController@create')->name('chat.create');
+    Route::get('/chat', 'User\HomeController@chat_index')->name('user_chat.index');
+    Route::post('chat/create', 'User\HomeController@chat_create')->name('user_chat.create');
 
     Route::get('/home', 'User\HomeController@index')->name('user.home');
     Route::post('/logout', 'User\Auth\LoginController@logout')->name('user.logout');

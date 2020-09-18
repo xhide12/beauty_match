@@ -85,7 +85,7 @@
             @yield('product_edit')
             @yield('product_delete')
             @yield('chat.index')            
-            @yield('user.home')
+            <!-- @yield('user.home') -->
             @yield('user.logout')
             @yield('user.edit')
             <!-- @yield('user.update') -->
@@ -94,7 +94,7 @@
             @yield('manufacture.home')
             @yield('manufacture.edit')
             @yield('manufacture_delete')
-            @yield('user.introduction')
+            <!-- @yield('user.introduction') -->
             @include('parts.footer')
 
         </main>

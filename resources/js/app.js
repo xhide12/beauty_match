@@ -11,8 +11,8 @@ $(document).ready(function() {
       $.ajax({
           url: url,
           data: {
-            user_chat: 1,
-            manufacture_chat: 2,
+            user_chat: $("#user_id").val(),
+            manufacture_chat: $("#manufacture_id").val(),
             text: $("#text").val()
           },
           method: "POST"

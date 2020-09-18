@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
 use App\Models\Introduction;
+use App\Models\Chat;
 
 class HomeController extends Controller
 {
@@ -81,6 +82,34 @@ class HomeController extends Controller
         $user = User::find($request->id);
         $user->delete();
         return redirect('/');
+    }
+
+ /**
+     * @return View
+     */
+    public function chat_index(Request $request)
+    {
+        $value = $request->input('introduction_id');
+        $introduction = Introduction::find($value);
+        $chats = Chat::where('user_chat', Auth::id())->where('manufacture_chat', $introduction->manufacture_id)->get();
+ 
+        return view('channels.user_index',[
+            "chats" => $chats,
+            'introduction' => $introduction
+        ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function chat_create(Request $request)
+    {
+        $chat = new Chat($request->all());
+        $chat->save();
+        event(new Chated($chat));
+
+        return response()->json(['message' => '投稿しました。']);
     }
 
 }

@@ -1,8 +1,4 @@
-@if(Auth::guard('user')->check())
-    @extends('layouts.user.app')
-@elseif (Auth::guard('manufacture')->check())
-    @extends('layouts.manufacture.app')
-@endif
+@extends('layouts.user.app')
 
 @section('content')
     <div class="container">
@@ -19,6 +15,8 @@
 
                     <div class="card-body">
                         <input type="text" id="text">
+                        <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
+                        <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
                         <input type="submit" value="送信" id="submit">
                     </div>
                 </div>
