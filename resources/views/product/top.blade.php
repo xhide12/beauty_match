@@ -26,7 +26,7 @@
         <tbody>
         @foreach($products as $product)
         <tr>
-            <td >{{ $product->brand }}</td>
+            <td>{{ $product->brand }}</td>
             <td>{{ $product->product_name }}</td>
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
