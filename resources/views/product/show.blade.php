@@ -4,7 +4,7 @@
 @section('product_show')
 
 <div class="container">
-    商品一覧<br>
+    商品詳細<br>
     <table class="table">
         <thead>
         <tr>

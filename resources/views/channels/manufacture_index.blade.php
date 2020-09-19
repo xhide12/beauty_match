@@ -17,7 +17,10 @@
                         <input type="text" id="text">
                         <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
                         <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
-                        <input type="submit" value="送信" id="submit">
+                        <input type="submit" value="送信" id="submit"><br><br><br>
+
+                        <a type="submit" class="btn btn-primary" href="{{ route('manufacture.home') }}">管理画面</a>
+                        </div>
                     </div>
                 </div>
             </div>

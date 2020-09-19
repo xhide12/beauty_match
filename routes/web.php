@@ -165,7 +165,7 @@ Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], fu
     Route::get('/delete', 'Manufacture\HomeController@delete')->name('manufacture_delete');
     Route::post('/remove', 'Manufacture\HomeController@remove')->name('manufacture_remove'); 
 
-    Route::post('/home/introduction', 'Manufacture\HomeController@judge')->name('manufacture.home');
+    Route::post('/home/introduction', 'Manufacture\HomeController@judge')->name('manufacture.introduction');
 
     Route::get('/product/register', 'ProductController@add')->name('product_add');
     Route::post('/product/register', 'ProductController@create')->name('product_create');
