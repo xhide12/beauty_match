@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('新規登録') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('user.register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('名前') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="salon_name" class="col-md-4 col-form-label text-md-right">{{ __('Salon Name') }}</label>
+                            <label for="salon_name" class="col-md-4 col-form-label text-md-right">{{ __('サロン名') }}</label>
 
                             <div class="col-md-6">
                                 <input id="salon_name" type="salon_name" class="form-control @error('salon_name') is-invalid @enderror" name="salon_name" value="{{ old('salon_name') }}" required autocomplete="salon_name">
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="salon_url" class="col-md-4 col-form-label text-md-right">{{ __('Salon URL') }}</label>
+                            <label for="salon_url" class="col-md-4 col-form-label text-md-right">{{ __('サロンURL') }}</label>
 
                             <div class="col-md-6">
                                 <input id="salon_url" type="salon_url" class="form-control @error('salon_url') is-invalid @enderror" name="salon_url" value="{{ old('salon_url') }}" required autocomplete="salon_url">
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="business_form" class="col-md-4 col-form-label text-md-right">{{ __('Business Form') }}</label>
+                            <label for="business_form" class="col-md-4 col-form-label text-md-right">{{ __('営業形態') }}</label>
 
                             <div class="col-md-6">
                                 <input id="business_form" type="business_form" class="form-control @error('business_form') is-invalid @enderror" name="business_form" value="{{ old('business_form') }}" required autocomplete="business_form">
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="monthly_sales" class="col-md-4 col-form-label text-md-right">{{ __('Monthly Sales') }}</label>
+                            <label for="monthly_sales" class="col-md-4 col-form-label text-md-right">{{ __('月間売上') }}</label>
 
                             <div class="col-md-6">
                                 <input id="monthly_sales" type="monthly_sales" class="form-control @error('monthly_sales') is-invalid @enderror" name="monthly_sales" value="{{ old('monthly_sales') }}" required autocomplete="monthly_sales">
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="living_area" class="col-md-4 col-form-label text-md-right">{{ __('Living Area') }}</label>
+                            <label for="living_area" class="col-md-4 col-form-label text-md-right">{{ __('お住まいの地域') }}</label>
 
                             <div class="col-md-6">
                                 <input id="living_area" type="living_area" class="form-control @error('living_area') is-invalid @enderror" name="living_area" value="{{ old('living_area') }}" required autocomplete="living_area">
@@ -138,7 +138,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail アドレス') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -152,7 +152,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -166,7 +166,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('パスワード再入力') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
