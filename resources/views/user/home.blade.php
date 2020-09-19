@@ -62,7 +62,8 @@
 </div>
 
 <div class="container">
-申請一覧<br>
+<br>
+<h5 class="font-weight-bold">申請一覧</h5>   
     <table class="table">
         <thead>
             <tr>
