@@ -66,10 +66,10 @@
                 <!-- <th nowrap>カテゴリー</th> -->
                 <th nowrap>サイズ</th>
                 <!-- <th nowrap>メーカー名</th> -->
-                <th nowrap>画像１</th>
-                <th nowrap>画像２</th>
-                <th nowrap>画像３</th>
-                <th nowrap>画像４</th>
+                <!-- <th nowrap>画像１</th> -->
+                <!-- <th nowrap>画像２</th> -->
+                <!-- <th nowrap>画像３</th> -->
+                <!-- <th nowrap>画像４</th> -->
                 <!-- <th nowrap>商品説明</th>
                 <th nowrap>成分・原材料</th>
                 <th nowrap>公式サイト</th>
@@ -113,7 +113,8 @@
                 <th>ユーザー名</th>
                 <th>商品id</th>
                 <th>申請日時</th>
-                <th>判定</th>
+                <th>ステータス</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
