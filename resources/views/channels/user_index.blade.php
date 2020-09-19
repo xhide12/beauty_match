@@ -19,7 +19,7 @@
                         <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
                         <input type="submit" value="送信" id="submit"><br><br>
 
-                        <a type="submit" class="btn btn-primary" href="{{ route('user.home') }}">My Page</a>
+                        <a type="submit" class="btn btn-primary" href="{{ route('user.home') }}">マイページ</a>
                     </div>
                 </div>
             </div>

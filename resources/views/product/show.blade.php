@@ -37,8 +37,8 @@
             <td><img src="{{ asset('/storage/'.$product->image4)}}" class="img-thumbnail"></td>
             <td>{{ $product->product_coment }}</td>
             <td>{{ $product->composition }}</td>
-            <td>{{ $product->official_hp }}</td>
-            <td>{{ $product->official_instagram }}</td>
+            <td><a href="{{ $product->official_hp }}">{{ $product->official_hp }}</a></td>
+            <td><a href="{{ $product->official_instagram }}">{{ $product->official_instagram }}</a></td>
             <td nowrap>
             <form method="post" action="{{ route('introduction_form') }}">
             @csrf

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">ユーザー様 管理画面</div>
+                <h5 class="card-header font-weight-bold">マイページ</h5>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -63,7 +63,7 @@
 
 <div class="container">
 <br>
-<h5 class="font-weight-bold">申請一覧</h5>   
+<h6 class="font-weight-bold">申請一覧</h6>   
     <table class="table">
         <thead>
             <tr>

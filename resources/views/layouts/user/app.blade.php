@@ -64,7 +64,7 @@
                                     <a class="dropdown-item" href="{{ route('user.home') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('mypage').submit();">
-                                        {{ __('MyPage') }}
+                                        {{ __('マイページ') }}
                                     </a>
                                     <form id="mypage" action="{{ route('user.home') }}" method="get" style="display: none;">
                                         @csrf
@@ -73,7 +73,7 @@
                                     <a class="dropdown-item" href="{{ route('user.logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('ログアウト') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
                                         @csrf

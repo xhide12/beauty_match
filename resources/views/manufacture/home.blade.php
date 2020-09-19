@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">メーカー様 管理画面</div>
+                <h5 class="card-header font-weight-bold">管理画面</h5>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -57,7 +57,7 @@
 
 <div class="container">
 <br>
-<h5 class="font-weight-bold">商品一覧</h5>
+<h6 class="font-weight-bold">商品一覧</h6>
     <table class="table">
         <thead>
             <tr>
@@ -84,10 +84,10 @@
             <!-- <td>{{ $product->category }}</td> -->
             <td nowrap>{{ $product->size }}</td>
             <!-- <td>{{ $product->manufacture_id }}</td> -->
-            <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
-            <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
-            <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>
-            <td><img src="{{ asset('/storage/'.$product->image4)}}" class="img-thumbnail"></td>
+            <!-- <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td> -->
+            <!-- <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td> -->
+            <!-- <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td> -->
+            <!-- <td><img src="{{ asset('/storage/'.$product->image4)}}" class="img-thumbnail"></td> -->
             <!-- <td>{{ $product->product_coment }}</td>
             <td>{{ $product->composition }}</td>
             <td>{{ $product->official_hp }}</td>
@@ -106,7 +106,7 @@
 
 <div class="container">
 <br><br>
-<h5 class="font-weight-bold">申請一覧</h5>
+<h6 class="font-weight-bold">申請一覧</h6>
     <table class="table">
         <thead>
             <tr>
