@@ -78,7 +78,7 @@
             <td>{{ $product->category }}</td>
             <td>{{ $product->size }}</td>
             <td>{{ $product->manufacture_id }}</td>
-            <td><img src="{{ asset('/storage/uploaded_image'.$product->image1)}}" class="img-thumbnail"></td>
+            <td><img src="{{ asset('/storage/'.$product->image1)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image2)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image3)}}" class="img-thumbnail"></td>
             <td><img src="{{ asset('/storage/'.$product->image4)}}" class="img-thumbnail"></td>

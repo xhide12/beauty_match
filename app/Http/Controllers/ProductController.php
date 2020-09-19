@@ -83,7 +83,7 @@ class ProductController extends Controller
         $product->official_hp = $request->official_hp;      
         $product->official_instagram = $request->official_instagram;      
         $product->save();
-        return redirect('/product/top');
+        return redirect('/manufacture/home');
     }
 
     public function show(Request $request)
@@ -185,7 +185,7 @@ public function remove(Request $request)
 {
     $product = Product::find($request->id);
     $product->delete();
-    return redirect('/product/top');
+    return redirect('/manufacture/home');
 }
 
 
