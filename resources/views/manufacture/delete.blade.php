@@ -20,6 +20,11 @@
                             <input type='hidden' name='id' value='{{ $manufacture->id }}'><br>
                             名前：{{ $manufacture->name }}<br>
                             メールアドレス：{{ $manufacture->email }}<br>
+
+                            <br><br>
+                            <h5 class="font-weight-bold">過去のチャットトークと商品情報が削除されますが、本当に退会しますか？</h5>
+                            <br>
+
                             <button class="btn btn-danger" type='submit'>退会する</button>
                             <input type="button" onclick="history.back()" value="戻る">
                     </form>

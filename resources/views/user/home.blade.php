@@ -69,6 +69,7 @@
             <tr>
                 <th>商品id</th>
                 <th>申請日時</th>
+                <th>ステータス</th>
             </tr>
         </thead>
         <tbody>
