@@ -26,7 +26,6 @@ class IntroductionController extends Controller
 
       $introduction->manufacture_id = Product::find($request->product_id)->manufacture->id;
       $introduction->product_id = $request->product_id;
-      $introduction->product_name = $introduction->product->product_name;
       $introduction->application_time = $datetime;
       $introduction->judgement = 3;
       $introduction->save();
