@@ -68,6 +68,7 @@
         <thead>
             <tr>
                 <th>商品id</th>
+                <th>商品名</th>
                 <th>申請日時</th>
                 <th>ステータス</th>
             </tr>
@@ -76,6 +77,7 @@
             @foreach($introductions as $introduction)
         <tr>
             <td>{{ $introduction->product_id }}</td>
+            <td>{{ $introduction->product_name }}</td>
             <td>{{ $introduction->application_time }}</td>
 
         @if ( $introduction->judgement === 1)
