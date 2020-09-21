@@ -14,106 +14,8 @@
 // Route::get('/', 'TopController@index');
 
 
-//ここからメーカー関係
-
-Route::get('/manufacture/register_complete/', function () {
-    return view('manufacture.register_complete');
-});
-
-Route::get('/manufacture/register_confirm/', function () {
-    return view('manufacture.register_confirm');
-});
-
-Route::get('/manufacture/register_dashboard/', function () {
-    return view('manufacture.register_dashboard');
-});
-
-Route::get('/manufacture/register_login/', function () {
-    return view('manufacture.register_login');
-});
-
-// Route::get('/manufacture/register/', function () {
-//     return view('manufacture.register');
-// });
-
-Route::get('/manufacture/withdraw_complete/', function () {
-    return view('manufacture.withdraw_complete');
-});
-
-Route::get('/manufacture/withdraw_confirm/', function () {
-    return view('manufacture.withdraw_confirm');
-});
-
-//ここまでメーカー関係
-
-
-//ここから商品関係
-
-Route::get('/product/regiter_complete/', function () {
-    return view('product.register_complete');
-});
-
-Route::get('/product/regiter_confirm/', function () {
-    return view('product.register_confirm');
-});
-
-Route::get('/product/regiter_delete_complete/', function () {
-    return view('product.register_delete_complete');
-});
-
-Route::get('/product/regiter_delete_confirm/', function () {
-    return view('product.register_delete_confirm');
-});
-
-Route::get('/product/regiter_update/', function () {
-    return view('product.register_update');
-});
-
-
-
 Route::get('/product/top', 'ProductController@index')->name('product_index');
-
-
-
 Route::get('/product/show', 'ProductController@show')->name('product_show');
-
-//ここまで商品関係
-
-
-//ここからユーザー関係
-
-
-
-Route::get('/user/register_complete/', function () {
-    return view('user.register_complete');
-});
-
-Route::get('/user/register_confirm/', function () {
-    return view('user.register_confirm');
-});
-
-Route::get('/user/register_dashboard/', function () {
-    return view('user.register_dashboard');
-});
-
-Route::get('/user/register_login/', function () {
-    return view('user.register_login');
-});
-
-Route::get('/user/register/', function () {
-    return view('user.register');
-});
-
-Route::get('/user/withdraw_complete/', function () {
-    return view('user.withdraw_complete');
-});
-
-Route::get('/user/withdraw_confirm/', function () {
-    return view('user.withdraw_confirm');
-});
-
-//ここまでユーザー関係
-
 
 //ここから固定ページ関係
 
@@ -149,12 +51,7 @@ Route::get('/password/reset/', function () {
 Route::get('/', 'TopController@index');
 
 
-
-
-
-
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
-
     Route::get('/chat', 'Manufacture\HomeController@chat_index')->name('manufacture_chat.index');
     Route::post('chat/create', 'Manufacture\HomeController@chat_create')->name('manufacture_chat.create');
 
