@@ -77,7 +77,6 @@
             @foreach($introductions as $introduction)
         <tr>
            <td>{{ $introduction->product_id }}</td>
-           
             <td>{{ $introduction->product->product_name }}</td>
             <td>{{ $introduction->application_time }}</td>
 
@@ -86,7 +85,7 @@
          <form method="get" action="{{ route('user_chat.index') }}?id={{ $introduction->id }}">
          @csrf
          <input type="hidden" name="introduction_id" value="{{ $introduction->id}}">
-        <button type="submit" class="btn btn-primary" href="">チャットへ</button>
+        <button type="submit" class="btn btn-primary" href="">チャット</button>
         </form>
         </td>
         @elseif( $introduction->judgement === 2)
