@@ -54,12 +54,53 @@
         text-align: center;
     }
     
+
+    /* ヘッダー固定による上部の間隔をあける */
     body {
         margin-top: 50px;
     }
 
+    /*1.フェードインアニメーションの指定*/
+    .scrollanime {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+    .fadeInDown {
+        animation-name: fadeInDown;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;         
+        }
+        100% {
+        opacity: 1;
+        transform: translate(0);
+        }
+    }
+ 
+    /*2.上下の動きを指定*/
+    .downup {transform: translateY(100px);}
 
     </style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+</script>
+
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                const wHeight = $(window).height();
+                const scrollAmount = $(window).scrollTop();
+                $('.scrollanime').each(function () {
+                    const targetPosition = $(this).offset().top;
+                    if(scrollAmount > targetPosition - wHeight + 60) {
+                        $(this).addClass("fadeInDown");
+                    }
+                });
+            });
+        });
+    
+    </script>
+
 
 </head>
 

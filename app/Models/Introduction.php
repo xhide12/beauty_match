@@ -34,7 +34,7 @@ class Introduction extends Model
 
     public function product()
     {
-        return $this->belongsToMany('App\Models\Product', 'product_id', 'id');
+        return $this->belongsTo('App\Models\Product', 'product_id', 'id');
     }
     
 }

@@ -124,7 +124,7 @@
 
             <td>{{ $introduction->user->name }}</td>
             <td>{{ $introduction->product_id }}</td>
-            <td>{{ $introduction->product_name }}</td>
+            <td>{{ optional($introduction->product)->product_name }}</td>
             <td>{{ $introduction->application_time }}</td>
             <td>{{ $introduction->judgement }}</td>
          <td>
