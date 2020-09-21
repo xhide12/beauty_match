@@ -18,12 +18,55 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+    .cover-img {
+	height: 600px;
+	display: table;
+	width: 100%;
+	background-size: cover;
+    }
+
+    /* ワイドスクリーン用のCSS */
+    @media only screen and (min-width: 1500px) {
+        .cover-img {
+            height: 800px;
+        }
+    }
+
+    /* タブレット用のCSS */
+    @media only screen and (min-width : 768px) and (max-width : 1200px) {
+        .cover-img {
+            height: 500px;
+        }
+    }
+
+    /* スマホ用のCSS */
+    @media only screen and (max-width: 479px) {
+        .cover-img {
+            height: 300px;
+        }
+    }
+
+    .cover-text {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    body {
+        margin-top: 50px;
+    }
+
+
+    </style>
+
 </head>
 
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-danger shadow-sm">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-danger shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Beauty Match') }}

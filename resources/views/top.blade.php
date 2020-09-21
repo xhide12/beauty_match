@@ -11,27 +11,48 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <a href="">
         <img src="image/top-image-1.png" alt="responsive image" class="d-block img-fluid">
-      </a>
+        <div class="carousel-caption d-none d-md-block text-muted font-weight-bold">
+          <h1>beautymatch</h1>
+          <p>美容系フリーランスと化粧品メーカーをつなぐサイト</p>
+        </div>
     </div>
     <div class="carousel-item">
-      <a href="">
         <img src="image/top-image-2.png" alt="responsive image" class="d-block img-fluid">
-      </a>
+        <div class="carousel-caption d-none d-md-block text-light font-weight-bold">
+          <h1>beautymatch</h1>
+          <p>美容系フリーランスと化粧品メーカーをつなぐサイト</p>
+        </div>
+
     </div>
     <div class="carousel-item">
-      <a href="">
         <img src="image/top-image-3.png" alt="responsive image" class="d-block img-fluid">
-      </a>
+        <div class="carousel-caption d-none d-md-block text-light font-weight-bold">
+          <h1>beautymatch</h1>
+          <p>美容系フリーランスと化粧品メーカーをつなぐサイト</p>
+        </div>
+
     </div>
   </div>
 </div>
 
-<br><br><br><br><br><br><br><br>
+<br><br>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 cover-img" style="background-image:url('image/top_back-2.png');">
+			<div class="cover-text text-center">
+				<p style="color: #fff;">ここがテキストですよ！！</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br>
+
 <div class="card-deck">
     @foreach($products as $product)
-    <div class="card">
+    <div class="card col-xs-4">
       <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="{{ asset('/storage/'.$product->image1)}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/></img>
       <div class="card-body bg-light">
         <h5 class="card-title font-weight-bold">{{ $product->brand }}</h5>

@@ -11,45 +11,7 @@
 |
 */
 
-// Route::get('/', 'TopController@index');
-
-
-Route::get('/product/top', 'ProductController@index')->name('product_index');
-Route::get('/product/show', 'ProductController@show')->name('product_show');
-
-//ここから固定ページ関係
-
-Route::get('/information/form/', function () {
-    return view('information.form');
-});
-
-Route::get('/promise/manufacture_rule/', function () {
-    return view('promise.manufacture_rule');
-});
-
-Route::get('/promise/personal_data/', function () {
-    return view('promise.personal_data');
-});
-
-Route::get('/promise/privacy_policy/', function () {
-    return view('promise.privacy_policy');
-});
-
-Route::get('/promise/user_rule/', function () {
-    return view('promise.user_rule');
-});
-
-Route::get('/password/reset/', function () {
-    return view('password.reset');
-});
-
-//ここまで固定ページ関係
-
-
-// Auth::routes();
-// Route::get('/', 'User\Auth\LoginController@index')->name('home');
 Route::get('/', 'TopController@index');
-
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
     Route::get('/chat', 'Manufacture\HomeController@chat_index')->name('manufacture_chat.index');
@@ -110,3 +72,34 @@ Route::group(['prefix' => 'user', 'middleware' => 'guest:user'], function() {
     Route::post('/register', 'User\Auth\RegisterController@register')->name('user.register');
     Route::get('/password/rest', 'User\Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
 });
+
+Route::get('/product/top', 'ProductController@index')->name('product_index');
+Route::get('/product/show', 'ProductController@show')->name('product_show');
+
+//ここから固定ページ関係
+
+Route::get('/information/form/', function () {
+    return view('information.form');
+});
+
+Route::get('/promise/manufacture_rule/', function () {
+    return view('promise.manufacture_rule');
+});
+
+Route::get('/promise/personal_data/', function () {
+    return view('promise.personal_data');
+});
+
+Route::get('/promise/privacy_policy/', function () {
+    return view('promise.privacy_policy');
+});
+
+Route::get('/promise/user_rule/', function () {
+    return view('promise.user_rule');
+});
+
+Route::get('/password/reset/', function () {
+    return view('password.reset');
+});
+
+//ここまで固定ページ関係

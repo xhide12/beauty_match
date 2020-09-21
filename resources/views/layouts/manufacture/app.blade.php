@@ -18,12 +18,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+    body {
+        margin-top: 50px;
+    }
+    </style>
+
 </head>
 
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-info shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Beauty Match') }}
