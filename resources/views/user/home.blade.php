@@ -16,7 +16,7 @@
 
                     <div class="table-responsive">
                         <form method="get" action="{{ route('user.edit') }}">
-                        {{ csrf_field() }}
+                        @csrf
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
