@@ -23,7 +23,6 @@ class IntroductionController extends Controller
       $datetime = date_create()->format('Y-m-d H:i:s');
 
       $introduction->user_id = Auth::guard('user')->user()->id;
-
       $introduction->manufacture_id = Product::find($request->product_id)->manufacture->id;
       $introduction->product_id = $request->product_id;
       $introduction->application_time = $datetime;

@@ -22,7 +22,7 @@ class Product extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    public function introduction()
+    public function introductions()
     {
         return $this->hasMany('App\Models\Introduction');
     }

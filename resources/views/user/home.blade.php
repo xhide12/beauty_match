@@ -77,8 +77,8 @@
             @foreach($introductions as $introduction)
         <tr>
            <td>{{ $introduction->product_id }}</td>
-            <td>{{ $introduction->product->product_name }}</td>
-            <td>{{ $introduction->application_time }}</td>
+           <td>{{ $introduction->product_name }}</td>
+           <td>{{ $introduction->application_time }}</td>
 
         @if ( $introduction->judgement === 1)
         <td>

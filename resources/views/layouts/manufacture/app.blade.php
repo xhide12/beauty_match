@@ -59,6 +59,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="{{ route('manufacture.home') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('mypage').submit();">
+                                        {{ __('マイページ') }}
+                                    </a>
+                                    <form id="mypage" action="{{ route('manufacture.home') }}" method="get" style="display: none;">
+                                        @csrf
+                                    </form>
+
+
                                     <a class="dropdown-item" href="{{ route('manufacture.logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

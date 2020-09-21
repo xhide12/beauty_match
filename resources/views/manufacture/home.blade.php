@@ -112,6 +112,7 @@
             <tr>
                 <th>ユーザー名</th>
                 <th>商品id</th>
+                <th>商品名</th>
                 <th>申請日時</th>
                 <th>ステータス</th>
                 <th></th>
@@ -120,8 +121,10 @@
         <tbody>
             @foreach($introductions as $introduction)
         <tr>
-            <td>{{ $introduction->user_id }}</td>
+
+            <td>{{ $introduction->user->name }}</td>
             <td>{{ $introduction->product_id }}</td>
+            <td>{{ $introduction->product_name }}</td>
             <td>{{ $introduction->application_time }}</td>
             <td>{{ $introduction->judgement }}</td>
          <td>

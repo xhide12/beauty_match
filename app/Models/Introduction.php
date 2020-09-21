@@ -26,7 +26,6 @@ class Introduction extends Model
     {
         return $this->belongsTo('App\Models\Manufacture');
     }
-
     
     public function user()
     {
@@ -35,7 +34,7 @@ class Introduction extends Model
 
     public function product()
     {
-        return $this->belongsTo('App\Models\Product', 'product_id', 'id');
+        return $this->belongsToMany('App\Models\Product', 'product_id', 'id');
     }
     
 }
