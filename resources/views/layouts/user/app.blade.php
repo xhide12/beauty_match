@@ -80,6 +80,19 @@
     /*2.上下の動きを指定*/
     .downup {transform: translateY(100px);}
 
+
+    .img-thumbnail {
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+    }
+
+    .img-show {
+        object-fit: cover;
+        width: 600px;
+        height: 600px;
+    }
+
     </style>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">

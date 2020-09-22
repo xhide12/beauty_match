@@ -30,47 +30,51 @@
                                     <td><input type="text" name="brand" value="{{old( 'brand', $product->brand )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('product_name')}}</td>
+                                    <td>{{__('商品名')}}</td>
                                     <td><input type="text" name="product_name" value="{{old( 'product_name', $product->product_name )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('category')}}</td>
+                                    <td>{{__('商品カテゴリー')}}</td>
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
-                                </tr>    
+                                </tr>
                                 <tr>
                                     <td>{{__('manufacture_id')}}</td>
                                     <td><input type="text" name="manufacture_id" value="{{old( 'manufacture_id', $product->manufacture_id )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('image1')}}</td>
+                                    <td>{{__('カラー名')}}</td>
+                                    <td><input type="text" name="size" value="{{old( 'size', $product->size )}}"></td>
+                                </tr>    
+                                <tr>
+                                    <td>{{__('画像1')}}</td>
                                     <td><input type="text" name="image1" value="{{old( 'image1', $product->image1 )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('image2')}}</td>
+                                    <td>{{__('画像2')}}</td>
                                     <td><input type="text" name="image2" value="{{old( 'image2', $product->image2 )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('image3')}}</td>
+                                    <td>{{__('画像3')}}</td>
                                     <td><input type="text" name="image3" value="{{old( 'image3', $product->image3 )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('image4')}}</td>
+                                    <td>{{__('画像4')}}</td>
                                     <td><input type="text" name="image4" value="{{old( 'image4', $product->image4 )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('product_coment')}}</td>
+                                    <td>{{__('商品コメント')}}</td>
                                     <td><input type="text" name="product_coment" value="{{old( 'product_coment', $product->product_coment )}}"></td>
                                 </tr> 
                                 <tr>
-                                    <td>{{__('composition')}}</td>
+                                    <td>{{__('成分表')}}</td>
                                     <td><input type="text" name="composition" value="{{old( 'composition', $product->composition )}}"></td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('official_hp')}}</td>
+                                    <td>{{__('公式サイト')}}</td>
                                     <td><input type="text" name="official_hp" value="{{old( 'official_hp', $product->official_hp )}}"></td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('official_instagram')}}</td>
+                                    <td>{{__('Instagram')}}</td>
                                     <td><input type="text" name="official_instagram" value="{{old( 'official_instagram', $product->official_instagram )}}"></td>
                                 </tr>   
                             </tbody>
