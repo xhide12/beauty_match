@@ -65,7 +65,7 @@
         <div class="col-md-8 text-center">
             <div class="card-body">
             <h4 class="card-title">for COMPANY</h4>
-            <p class="card-text">商品PRやプロモーションを依頼したい方<br>(インフルエンサーになりたい方)</p>
+            <p class="card-text">商品PRやプロモーションを依頼したい方<br>(既存の方法に限界を感じているご担当社様)</p>
             @unless (Auth::guard('manufacture')->check())
               <a href="{{ route('manufacture.register') }}" class="btn btn-primary">新規登録</a>　<a href="{{ route('manufacture.login') }}" class="btn btn-primary">ログイン</a>
             @else   
