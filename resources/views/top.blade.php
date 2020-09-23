@@ -19,7 +19,7 @@
     </div>
     <div class="carousel-item">
         <img src="image/top-image-2.png" alt="responsive image" class="d-block img-fluid">
-        <div class="carousel-caption d-none d-md-block text-Light font-weight-bold">
+        <div class="carousel-caption d-none d-md-block text-dark font-weight-bold">
           <h5>”人”と"感情"と"信頼"の時代の</h5>
           <h5>美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
         </div>
@@ -27,7 +27,7 @@
     </div>
     <div class="carousel-item">
         <img src="image/top-image-3.png" alt="responsive image" class="d-block img-fluid">
-        <div class="carousel-caption d-none d-md-block text-Light font-weight-bold">
+        <div class="carousel-caption d-none d-md-block text-dark font-weight-bold">
         <h5>”人”と"感情"と"信頼"の時代の</h5>
           <h5>美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
         </div>
