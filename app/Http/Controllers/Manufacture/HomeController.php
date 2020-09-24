@@ -32,7 +32,8 @@ class HomeController extends Controller
         $manufacture = Manufacture::find(Auth::id());
         // $products = Product::with('manufacture')->get();
         $products = Product::where('manufacture_id', Auth::id())->get();
-        $introductions = Introduction::with('manufacture')->get();
+        // $introductions = Introduction::with('manufacture')->get();
+        $introductions = Introduction::where('manufacture_id', Auth::id())->get();
         return view('manufacture.home',compact('manufacture', 'products','introductions'));
     }
 

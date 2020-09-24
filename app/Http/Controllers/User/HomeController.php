@@ -31,7 +31,8 @@ class HomeController extends Controller
     {
         $user = User::find(Auth::id());
         $products = Product::with('user')->get();
-        $introductions = Introduction::with('user')->get();
+        // $introductions = Introduction::with('user')->get();
+        $introductions = Introduction::where('user_id', Auth::id())->get();
         return view('user.home',compact('user', 'products','introductions'));
     }
 
