@@ -18,6 +18,7 @@ class ProductController extends Controller
         $product->brand = $request->brand;
         $product->product_name = $request->product_name;
         $product->category = $request->category;
+        $product->price = $request->price;
         $product->size = $request->size;
         $product->manufacture_id = $request->manufacture_id;
 
@@ -111,6 +112,7 @@ public function update(Request $request)
     $product->brand = $request->brand;
     $product->product_name = $request->product_name;
     $product->category = $request->category;
+    $product->price = $request->price;
     $product->size = $request->size;
     $product->manufacture_id = $request->manufacture_id;
 

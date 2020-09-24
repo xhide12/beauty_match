@@ -30,7 +30,8 @@ class HomeController extends Controller
     public function index()
     {
         $manufacture = Manufacture::find(Auth::id());
-        $products = Product::with('manufacture')->get();
+        // $products = Product::with('manufacture')->get();
+        $products = Product::where('manufacture_id', Auth::id())->get();
         $introductions = Introduction::with('manufacture')->get();
         return view('manufacture.home',compact('manufacture', 'products','introductions'));
     }

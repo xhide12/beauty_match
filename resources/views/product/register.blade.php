@@ -82,19 +82,19 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="manufacture_id" class="col-md-4 col-form-label text-md-right">{{ __('メーカー名') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="manufacture_id" type="manufacture_id" class="form-control @error('manufacture_id') is-invalid @enderror" name="manufacture_id" value="{{ old('manufacture_id') }}" required autocomplete="manufacture_id">
+                            <div class="col-md-6"> -->
+                                <input id="manufacture_id" type="hidden" class="form-control @error('manufacture_id') is-invalid @enderror" name="manufacture_id" value="{{ Auth::id() }}" autocomplete="manufacture_id">
 
-                                @error('manufacture_id')
+                                <!-- @error('manufacture_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div>    -->
 
                         <div class="form-group row">
                             <label for="image1" class="col-md-4 col-form-label text-md-right">{{ __('画像１') }}</label>
@@ -215,6 +215,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('登録') }}
                                 </button>
+                                <input type="button" onclick="history.back()" value="戻る">
                             </div>
                         </div>
                     </form>
