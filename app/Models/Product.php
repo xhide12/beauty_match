@@ -13,7 +13,7 @@ class Product extends Model
 
     public function manufacture()
     {
-        return $this->belongsTo('App\Models\Manufacture');
+        return $this->belongsTo('App\Models\Manufacture','manufacture_id', 'id');
     }
 
     

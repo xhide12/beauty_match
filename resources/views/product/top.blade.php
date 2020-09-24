@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="font-weight-bold">
-    紹介してほしい商品一覧
+    商品一覧
     </div>
     <div class="card-deck card-group row-cols-1 row-cols-md-3">
         @foreach($products as $product)

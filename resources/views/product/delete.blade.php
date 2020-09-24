@@ -38,6 +38,10 @@
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
                                 </tr>
                                 <tr>
+                                    <td>{{__('販売価格(税込)')}}</td>
+                                    <td><input type="text" name="price" value="{{old( 'price', $product->price )}}"></td>
+                                </tr>    
+                                <tr>
                                     <td>{{__('manufacture_id')}}</td>
                                     <td><input type="text" name="manufacture_id" value="{{old( 'manufacture_id', $product->manufacture_id )}}"></td>
                                 </tr>    

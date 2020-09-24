@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TopController@index');
+Route::get('/', 'TopController@index')->name('home');
 
 Route::group(['prefix' => 'manufacture', 'middleware' => 'auth:manufacture'], function(){
     Route::get('/chat', 'Manufacture\HomeController@chat_index')->name('manufacture_chat.index');

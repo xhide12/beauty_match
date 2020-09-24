@@ -38,6 +38,10 @@
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
                                 </tr>
                                 <tr>
+                                    <td>{{__('販売上代(税込)')}}</td>
+                                    <td><input type="text" name="price" value="{{old( 'price', $product->price )}}"></td>
+                                </tr>
+                                <tr>
                                     <td>{{__('サイズ')}}</td>
                                     <td><input type="text" name="size"" value="{{old( 'size', $product->size )}}"></td>
                                 </tr>

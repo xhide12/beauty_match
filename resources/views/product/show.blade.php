@@ -47,16 +47,16 @@
                     <h2 class="font-weight-bold">{{ $product->product_name }}</h2>
                     <h5>カラー名：{{ $product->size }}</h5>
 
-                    <h6>メーカー：{{ $product->manufacture_id }}</h6>
+                    <h6>メーカー：{{ optional($product->manufacture)->company_name }}</h6>
                     <h6>カテゴリー：{{ $product->category }}</h6>
-                    <h6>店頭販売価格(税抜)：</h6>
+                    <h6>店頭販売価格(税込)：{{ number_format($product->price) }}円</h6>
                     <br>
                     <p>{{ $product->product_coment }}</p>
                     <br>
                     <p>【成分表】{{ $product->composition }}</p>
                     <br>
-                    <h6>公式サイト <a href="{{ $product->official_hp }}">{{ $product->official_hp }}</a></h6>
-                    <h6>Instagram <a href="{{ $product->official_instagram }}">{{ $product->official_instagram }}</a></h6>
+                    <h6>公式サイト <a href="{{ $product->official_hp }}" target="_blank">{{ $product->official_hp }}</a></h6>
+                    <h6>Instagram <a href="{{ $product->official_instagram }}" target="_blank">{{ $product->official_instagram }}</a></h6>
                 </div>
 
                 <br><br><br>
