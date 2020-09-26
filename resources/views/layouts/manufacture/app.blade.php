@@ -23,6 +23,11 @@
     body {
         margin-top: 50px;
     }
+
+    ul {
+       list-style: none;
+    }
+    
     </style>
 
 </head>

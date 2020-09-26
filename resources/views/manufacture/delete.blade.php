@@ -15,7 +15,7 @@
                     @endif
 
                     <div class="table-responsive">
-                    <form action='{{ route('manufacture_remove') }}' method='post'>
+                    <form action="{{ route('manufacture_remove') }}" method='post'>
                         @csrf
                             <input type='hidden' name='id' value='{{ $manufacture->id }}'><br>
                             名前：{{ $manufacture->name }}<br>
