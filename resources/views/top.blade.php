@@ -101,7 +101,8 @@
 
   <div class="row card-deck card-group row-cols-1 row-cols-md-3 scrollanime downup">
           @foreach($products as $product)
-          <div class="col-3" style="padding-bottom: 40px;">
+          @if($loop->index < 6)
+            <div class="col-3" style="padding-bottom: 40px;">
                 <div class="card col-xs-4">
                     <a href="{{ route('product_show') }}?id={{ $product->id }}">
                     <img class="bd-placeholder-img card-img-top" width="100%" height="300" src="{{ asset('/storage/'.$product->image1)}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/></img></a>
@@ -117,6 +118,7 @@
                     </div>
                 </div>
             </div>
+          @endif
           @endforeach
   </div>
 </div>
