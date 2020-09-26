@@ -19,7 +19,7 @@ class Chat extends Model
      * @var array
      */
     protected $fillable = [
-        'user_chat', 'manufacture_chat', 'text'
+        'user_chat', 'manufacture_chat', 'text', 'introduction_id'
     ];
 
     public function manufacture()

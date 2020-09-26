@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
 use App\Models\Introduction;
 use App\Models\Chat;
+use App\Events\Chated;
 
 class HomeController extends Controller
 {

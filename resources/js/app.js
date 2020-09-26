@@ -13,13 +13,14 @@ $(document).ready(function() {
           data: {
             user_chat: $("#user_id").val(),
             manufacture_chat: $("#manufacture_id").val(),
-            text: $("#text").val()
+            text: $("#text").val(),
+            introduction_id: $("#introduction_id").val()
           },
           method: "POST"
       });
       return false;
   });
-  window.Echo.channel('chat')
+  window.Echo.private('chat.' + $('#introduction_id').val())
       .listen('Chated', (e) => {
           $("#board").append('<li>' + e.chat.text + '</li>');
       });

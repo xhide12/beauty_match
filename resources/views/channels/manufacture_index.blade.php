@@ -15,6 +15,7 @@
 
                     <div class="card-body">
                         <input type="text" id="text">
+                        <input type="hidden" id="introduction_id" value="{{ $introduction->id }}">
                         <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
                         <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
                         <input type="submit" value="送信" id="submit"><br><br><br>

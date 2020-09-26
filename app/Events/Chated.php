@@ -36,6 +36,6 @@ class Chated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('chat');
+        return new PrivateChannel('chat.'.$this->chat->introduction_id);
     }
 }

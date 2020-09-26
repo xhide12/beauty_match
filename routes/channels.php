@@ -11,6 +11,6 @@
 |
 */
 
-Broadcast::channel('chat', function () {
+Broadcast::channel('chat.{introductionId}', function ($user, $introductionId) {
     return true;
 });
