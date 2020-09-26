@@ -13,14 +13,14 @@
     <div class="carousel-item active">
         <img src="image/top-image-1.png" alt="responsive image" class="d-block img-fluid">
         <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”人”と"感情"と"信頼"の時代の</h5>
+        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
         <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
         </div>
     </div>
     <div class="carousel-item">
         <img src="image/top-image-2.png" alt="responsive image" class="d-block img-fluid">
         <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”人”と"感情"と"信頼"の時代の</h5>
+        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
         <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
         </div>
 
@@ -28,7 +28,7 @@
     <div class="carousel-item">
         <img src="image/top-image-3.png" alt="responsive image" class="d-block img-fluid">
         <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”人”と"感情"と"信頼"の時代の</h5>
+        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
         <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
         </div>
 
@@ -94,28 +94,31 @@
 <br><br>
 
 <div class="container">
-<div class="font-weight-bold scrollanime downup d-flex justify-content-between">
-  <h5>紹介してほしい商品</h5>
-  <h6><a href="{{ route('product_index') }}">もっと見る＞＞</a></h6>
-</div>
+  <div class="scrollanime downup d-flex justify-content-between">
+    <h5 class="font-weight-bold">★★紹介してほしい商品★★</h5>
+    <h6><a href="{{ route('product_index') }}">もっと見る＞＞</a></h6>
+  </div>
 
-<div class="row card-deck card-group row-cols-1 row-cols-md-3 scrollanime downup">
-        @foreach($products as $product)
-        <div class="col-3" style="padding-bottom: 40px;">
-        <div class="card col-xs-4" style="width: 20rem;">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="{{ asset('/storage/'.$product->image1)}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/></img>
-            <div class="card-body bg-light" style="height: 25rem;">
-                <h5 class="card-title font-weight-bold">{{ $product->brand }}</h5>
-                <h6 class="card-title font-weight-bold">{{ $product->product_name }}  {{ $product->size }}</h6>
-                <p class="card-text">{{ $product->product_coment }}</p>
+  <div class="row card-deck card-group row-cols-1 row-cols-md-3 scrollanime downup">
+          @foreach($products as $product)
+          <div class="col-3" style="padding-bottom: 40px;">
+                <div class="card col-xs-4">
+                    <a href="{{ route('product_show') }}?id={{ $product->id }}">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="300" src="{{ asset('/storage/'.$product->image1)}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/></img></a>
+                    <div class="card-body bg-light" style="height: 22rem;">
+                        <h5 class="card-title font-weight-bold">{{ $product->brand }}</h5>
+                        <h6 class="card-title font-weight-bold">{{ $product->product_name }}</h6>
+                        <h6 class="card-title font-weight-bold">{{ $product->size }}</h6>
+                        <p class="card-text"><small class="text-muted">{{ $product->product_coment }}</small></p>
+
+                    </div>
+                    <div class="card-footer bg-light row-eq-height">
+                        <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">詳細</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer bg-light row-eq-height">
-                <a type="submit" class="btn btn-primary" href="{{ route('product_show') }}?id={{ $product->id }}">詳細</a>
-            </div>
-         </div>
-         </div>
-         @endforeach
-</div>
+          @endforeach
+  </div>
 </div>
 
 <br><br><br><br><br><br><br><br>
