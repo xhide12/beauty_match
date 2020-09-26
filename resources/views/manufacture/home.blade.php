@@ -125,11 +125,8 @@
         </td>
         @if ( $introduction->judgement === 1)
         <td>
-            <form method="get" action="{{ route('manufacture_chat.index') }}?id={{ $introduction->id }}">
-            @csrf
-            <input type="hidden" name="introduction_id" value="{{ $introduction->id }}">
-            <button type="submit" class="btn btn-primary" href="">チャットへ</button>
-            </form>
+            <a type="submit" class="btn btn-primary" href="{{ route('manufacture_chat.index',['introduction_id' => $introduction->id
+          ]) }}">チャットへ</a>
         </td>
         @endif
 

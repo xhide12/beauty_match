@@ -88,11 +88,11 @@ class HomeController extends Controller
  /**
      * @return View
      */
-    public function chat_index(Request $request)
+    public function chat_index($introduction_id)
     {
-        $value = $request->input('introduction_id');
-        $introduction = Introduction::find($value);
-        $chats = Chat::where('user_chat', Auth::id())->where('manufacture_chat', $introduction->manufacture_id)->get();
+
+        $introduction = Introduction::find($introduction_id);
+        $chats = Chat::where('user_chat', Auth::id())->where('manufacture_chat', $introduction->manufacture_id)->where('introduction_id',$introduction_id)->get();
  
         return view('channels.user_index',[
             "chats" => $chats,
