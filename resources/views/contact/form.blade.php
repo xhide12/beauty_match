@@ -58,9 +58,25 @@
             </div>
         </div>
         <div class="text-center">
-        <button type="submit" name="action" class="btn btn-primary" value="sent">送信する</button>
+        <button type="submit" name="action" class="btn btn-primary" value="sent">送信</button>
+        <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
         </div>
         </form>
+    </div>
+</div>
+<br><br><br>
+<div class="container-fluid text-center text-muted">
+    <div class="row">
+    <div class="col text-right">
+        <img src="image/phone_small.png" alt="" >
+        </div>
+        <div class="col text-left">
+        <br>
+        <h4>お電話はこちら</h4>
+        <h3>090-4936-6218</h3>
+        <p>受付時間：10：00～19：00（土日祝除く）</p>
+        </div>
+
     </div>
 </div>
 <br><br><br>

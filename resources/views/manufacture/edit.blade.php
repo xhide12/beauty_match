@@ -54,7 +54,7 @@
                         
                         <input type='hidden' name='id' value='{{ $manufacture->id }}'><br>
                         <button class="btn btn-primary" type='submit'>変更</button>
-                        <input type="button" onclick="history.back()" value="戻る">
+                        <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                     </form>
                     </div>
                 </div>

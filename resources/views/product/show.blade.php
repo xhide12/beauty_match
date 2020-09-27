@@ -62,14 +62,14 @@
                 <br><br><br>
 
                 @unless (Auth::guard('user')->check())
-                <h6 class="font-weight-bold">商品を紹介したい場合は、ログインしてください。</h6>
-                <input type="button" onclick="history.back()" value="戻る">
+                <h6 class="font-weight-bold">商品を紹介したい場合は、ログインしてください。</h6><br><br>
+                <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                 @else
                 <form method="post" action="{{ route('introduction_form') }}">
                 @csrf
                 <input type='hidden' name='product_id' value="{{ $product->id }}"><br>
                 <button type="submit" class="btn btn-primary">紹介</button>
-                <input type="button" onclick="history.back()" value="戻る">
+                <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                 </form>
                 @endunless
             </div>

@@ -30,6 +30,12 @@
     
     </style>
 
+    <script>
+    $(function() {
+        $('html,body').animate({ scrollTop: 0 }, '1');
+    });
+    </script>	
+
 </head>
 
 

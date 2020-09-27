@@ -215,7 +215,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('登録') }}
                                 </button>
-                                <input type="button" onclick="history.back()" value="戻る">
+                                <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                             </div>
                         </div>
                     </form>

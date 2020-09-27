@@ -122,6 +122,26 @@
           @endforeach
   </div>
 </div>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <a href="{{ route('contact') }}">
+      <img src="image/contact_btn.jpg" alt="お問い合わせフォームへ">
+      </a>
+    </div>
 
-<br><br><br><br><br><br><br><br>
+    <div class="col text-right">
+      <img src="image/phone_large.png" alt="" >
+    </div>
+    <div class="col text-left">
+      <br>
+      <h5 class="font-weight-bold">お電話でのお問い合わせはこちら</h5>
+      <h3>090-4936-6218</h3>
+      <p class="text-muted">受付時間：10：00～19：00(土日祝除く)</p>
+    </div>
+
+  </div>
+</div>
+<br><br>
 @endsection

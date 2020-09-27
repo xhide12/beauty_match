@@ -26,7 +26,7 @@
                             <br>
 
                             <button class="btn btn-danger" type='submit'>退会する</button>
-                            <input type="button" onclick="history.back()" value="戻る">
+                            <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                     </form>
                     </div>
                 </div>
