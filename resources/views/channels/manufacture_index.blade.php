@@ -14,14 +14,13 @@
                     </div>
 
                     <div class="card-body">
-                        <input type="text" id="text">
+                        <textarea type="text" id="text" cols="80" rows="2"></textarea><br><br>
                         <input type="hidden" id="introduction_id" value="{{ $introduction->id }}">
                         <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
                         <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
-                        <input type="submit" value="送信" id="submit"><br><br><br>
+                        <input type="submit" class="btn btn-primary" value="送信" id="submit">
 
-                        <a type="submit" class="btn btn-primary" href="{{ route('manufacture.home') }}">管理画面</a>
-                        </div>
+                        <a type="submit" class="btn btn-secondary" href="{{ route('manufacture.home') }}">管理画面</a>
                     </div>
                 </div>
             </div>
