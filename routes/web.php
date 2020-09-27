@@ -103,3 +103,18 @@ Route::get('/password/reset/', function () {
 });
 
 //ここまで固定ページ関係
+
+
+//ここから問い合わせフォーム関係
+
+//入力ページ
+Route::get('contact', 'ContactController@index')->name('contact');
+
+//確認ページ
+Route::post('contact/confirm', 'ContactController@confirm')->name('confirm');
+
+//送信完了ページ
+Route::post('contact/sent', 'ContactController@sent')->name('sent');
+
+
+//ここまで問い合わせフォーム関係
