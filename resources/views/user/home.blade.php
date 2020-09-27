@@ -67,8 +67,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th>商品id</th>
+                <!-- <th>商品id</th> -->
                 <th>商品名</th>
+                <th>カラー/サイズ</th>
                 <th>申請日時</th>
                 <th>ステータス</th>
             </tr>
@@ -76,8 +77,9 @@
         <tbody>
             @foreach($introductions as $introduction)
         <tr>
-           <td>{{ $introduction->product_id }}</td>
-           <td>{{ $introduction->product_name }}</td>
+           <!-- <td>{{ $introduction->product_id }}</td> -->
+           <td>{{ optional($introduction->product)->product_name }}</td>
+           <td>{{ optional($introduction->product)->size}}</td>
            <td>{{ $introduction->application_time }}</td>
 
         @if ( $introduction->judgement === 1)
