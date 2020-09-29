@@ -2,11 +2,14 @@
 
 @section('product_index')
 
-<div class="container">
-    <div>
-    <h5 class="font-weight-bold">★★商品一覧★★</h5>
-    </div>
+<div class="container product_bannar">
+	<div class="row">
+        <div class="col-xs-12"><img class="img-fluid" src="../image/product_top-1.png"></div>
+	</div>
+</div>
 
+
+<div class="container">
     <div class="row card-deck card-group row-cols-1 row-cols-md-3">
         @foreach($products as $product)
             <div class="col-3" style="padding-bottom: 40px;">

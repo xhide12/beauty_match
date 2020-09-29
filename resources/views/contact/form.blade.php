@@ -1,9 +1,14 @@
 @extends('layouts.user.app')
 
 @section('content')
-<div class="container">
-    <h1 class="text-center mt-2 mb-5">お問い合わせ</h1>
 
+<div class="container product_bannar">
+	<div class="row">
+        <div class="col-xs-12"><img class="img-fluid" src="../image/cotact-top.jpg"></div>
+	</div>
+</div>
+
+<div class="container">
     <div class="container">
         <form action="contact/confirm" method="post">
         @csrf
