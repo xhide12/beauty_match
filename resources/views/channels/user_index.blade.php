@@ -3,8 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
+        <div class="col-md-8 bg-dark text-white">
+                <div class="card bg-light text-dark">
                     <div class="card-header">
                         <ul id="board">
                             @foreach($chats as $chat)
