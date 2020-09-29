@@ -78,7 +78,7 @@
             <a type="submit" class="btn btn-primary" href="{{ route('product_edit') }}?id={{ $product->id }}">修正</a>
             </td>
             <td nowrap>
-            <a type="submit" class="btn btn-primary" href="{{ route('product_delete') }}?id={{ $product->id }}">削除</a>
+            <a type="submit" class="btn btn-danger" href="{{ route('product_delete') }}?id={{ $product->id }}">削除</a>
             </td>
         </tr>
             @endforeach

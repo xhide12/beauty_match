@@ -138,7 +138,7 @@
       <br>
       <h5 class="font-weight-bold">お電話でのお問い合わせはこちら</h5>
       <h3>090-4936-6218</h3>
-      <p class="text-muted">受付時間：10：00～19：00(土日祝除く)</p>
+      <p class="text-muted">受付時間：00：00～24：00(土日祝もOK!)</p>
     </div>
 
   </div>

@@ -85,7 +85,7 @@
                         </table>
 
                         <input type='hidden' name='id' value='{{ $product->id }}'><br>
-                        <button class="btn btn-primary" type='submit'>削除</button>
+                        <button class="btn btn-danger" type='submit'>削除</button>
                         <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                     </form> 
                     </div>
