@@ -135,15 +135,15 @@
     <div id="app">
         <nav class="navbar fixed-top navbar-expand-md navbar-light bg-danger shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
                     {{ config('app.name', 'Beauty Match') }}
-                <!-- <img src="image/logo.png" alt="logo"> -->
+                <!-- <img src="image/header_logo.png" alt="logo"> -->
                 </a>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse font-weight-bold" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -157,7 +157,7 @@
                                 <a class="nav-link" href="{{ route('user.login') }}">{{ __('ログイン') }}</a>
                             </li>
                             @if (Route::has('user.register'))
-                                <li class="nav-item">
+                                <li class="nav-item menu">
                                     <a class="nav-link" href="{{ route('user.register') }}">{{ __('新規登録') }}</a>
                                 </li>
                             @endif

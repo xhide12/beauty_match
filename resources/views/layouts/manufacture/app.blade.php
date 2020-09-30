@@ -43,7 +43,7 @@
     <div id="app">
         <nav class="navbar fixed-top navbar-expand-md navbar-light bg-info shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
                     {{ config('app.name', 'Beauty Match') }}
                     <!-- <img src="image/logo.png" alt="logo"> -->
                 </a>
@@ -52,7 +52,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse font-weight-bold" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
