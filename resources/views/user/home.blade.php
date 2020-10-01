@@ -22,7 +22,7 @@
                                     <tr>
                                         <th nowrap>{{__('名前')}}</th>
                                         <th nowrap>{{__('Eメール')}}</th>
-                                        <th nowrap>{{__('LINE ID')}}</th>
+                                        <th nowrap>{{__('紹介可能人数')}}</th>
                                         <th nowrap>{{__('サロン名')}}</th>
                                         <th nowrap>{{__('サロンHP')}}</th>
                                         <!-- <th nowrap>{{__('営業形態')}}</th> -->

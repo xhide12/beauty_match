@@ -53,7 +53,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="business_form" class="col-md-4 col-form-label text-md-right">{{ __('営業形態') }}</label>
 
                             <div class="col-md-6">
@@ -65,21 +65,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="monthly_sales" class="col-md-4 col-form-label text-md-right">{{ __('月間売上') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="monthly_sales" type="monthly_sales" class="form-control @error('monthly_sales') is-invalid @enderror" name="monthly_sales" value="{{ old('monthly_sales') }}" autocomplete="monthly_sales">
-
-                                @error('monthly_sales')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="customer" class="col-md-4 col-form-label text-md-right">{{ __('紹介可能人数') }}<span class="badge badge-danger ml-1">必須</span></label>
@@ -92,10 +78,24 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div><p>*数字のみ入力</p>
                         </div>
 
                         <div class="form-group row">
+                            <label for="monthly_sales" class="col-md-4 col-form-label text-md-right">{{ __('月間売上(円)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="monthly_sales" type="monthly_sales" class="form-control @error('monthly_sales') is-invalid @enderror" name="monthly_sales" value="{{ old('monthly_sales') }}" autocomplete="monthly_sales">
+
+                                @error('monthly_sales')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div><p>*数字のみ入力</p>
+                        </div>
+
+                        <!-- <div class="form-group row">
                             <label for="living_area" class="col-md-4 col-form-label text-md-right">{{ __('お住まいの地域') }}</label>
 
                             <div class="col-md-6">
@@ -107,7 +107,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="facebook_id" class="col-md-4 col-form-label text-md-right">{{ __('Facebook ID') }}</label>
@@ -178,6 +178,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('登録') }}
                                 </button>
+                                <input type="button" onclick="history.back()" class="btn btn-secondary" value="戻る">
                             </div>
                         </div>
                     </form>

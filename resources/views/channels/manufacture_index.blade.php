@@ -13,7 +13,7 @@
                         </ul>
                     </div>
 
-                    <div class="card-body bg-dark   ">
+                    <div class="card-body bg-dark">
                         <div class="row">
                             <textarea type="text" id="text" cols="80" rows="2"></textarea>
                             <input type="hidden" id="introduction_id" value="{{ $introduction->id }}">
