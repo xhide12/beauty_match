@@ -92,8 +92,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th>ユーザー名</th>
-                <!-- <th>商品id</th> -->
+                <th>名前</th>
+                <th>紹介可能数</th>
+                <th>Instagram ID</th>
                 <th>商品名</th>
                 <th>カラー/サイズ</th>
                 <th>申請日時</th>
@@ -108,7 +109,8 @@
         <tr>
 
             <td>{{ $introduction->user->name }}</td>
-            <!-- <td>{{ $introduction->product_id }}</td> -->
+            <td>{{ $introduction->user->customer }}　人</td>
+            <td>{{ $introduction->user->instagram_id }}</td>
             <td>{{ optional($introduction->product)->product_name }}</td>
             <td>{{ optional($introduction->product)->size}}</td>
             <td>{{ $introduction->application_time }}</td>

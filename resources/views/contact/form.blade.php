@@ -69,7 +69,7 @@
         </form>
     </div>
 </div>
-<br><br><br>
+<br><br>
 <div class="container-fluid text-center text-muted">
     <div class="row">
     <div class="col text-right">
@@ -77,8 +77,8 @@
         </div>
         <div class="col text-left">
         <br>
-        <h4>お電話はこちら</h4>
-        <h3>090-4936-6218</h3>
+        <h3 class="font-weight-bold">お電話はこちら</h3>
+        <h2>090-4936-6218</h2>
         <p>受付時間：00：00～24：00（土日祝もOK!）</p>
         </div>
 

@@ -61,7 +61,7 @@ class HomeController extends Controller
         $user = User::find(Auth::id());
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->line_id = $request->line_id;
+        $user->customer = $request->customer;
         $user->salon_name = $request->salon_name;
         $user->salon_url = $request->salon_url;
         $user->business_form = $request->business_form;

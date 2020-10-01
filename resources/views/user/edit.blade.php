@@ -34,8 +34,8 @@
                                     <td><input type="text" name="email" value="{{old( 'email', $user->email )}}"></td>
                                 </tr>    
                                 <tr>
-                                    <td>{{__('line_id')}}</td>
-                                    <td><input type="text" name="line_id" value="{{old( 'line_id', $user->line_id )}}"></td>
+                                    <td>{{__('customer')}}</td>
+                                    <td><input type="text" name="customer" value="{{old( 'customer', $user->customer )}}"></td>
                                 </tr>    
                                 <tr>
                                     <td>{{__('salon_name')}}</td>

@@ -36,7 +36,7 @@
                                             <tr>
                                                 <td nowrap>{{ $user->name }}</td>
                                                 <td nowrap>{{ $user->email }}</td>
-                                                <td nowrap>{{ $user->line_id }}</td>
+                                                <td nowrap>{{ $user->customer }}</td>
                                                 <td nowrap>{{ $user->salon_name}}</td>
                                                 <td nowrap>{{ $user->salon_url}}</td>
                                                 <!-- <td nowrap>{{ $user->business_form}}</td> -->
