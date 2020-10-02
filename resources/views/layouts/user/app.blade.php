@@ -98,12 +98,17 @@
     }
 
     .product_bannar{
-        padding-bottom:50px
+        padding-bottom:50px;
     }
 
     .thanks {
-        padding-bottom:50px 
+        padding-bottom:50px;
     }
+
+    .chat-bottom{
+        padding-bottom:20px;
+    }
+
 
     </style>
 

@@ -1,9 +1,9 @@
 @extends('layouts.user.app')
 
 @section('content')
-    <div class="container">
+    <div class="container chat-bottom">
         <div class="row justify-content-center">
-        <div class="col-md-8 bg-dark text-white">
+            <div class="col-md-8 bg-dark text-white">
                 <div class="card bg-light text-dark">
                     <div class="card-header">
                         <ul id="board">
@@ -14,11 +14,13 @@
                     </div>
 
                     <div class="card-body bg-dark">
-                        <input type="text" id="text">
-                        <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
-                        <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
-                        <input type="submit" value="送信" id="submit"><br><br>
-
+                        <div class="row">
+                            <textarea type="text" id="text" cols="80" rows="1"></textarea>
+                            <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
+                            <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
+                            <input type="submit" value="送信"  class="btn btn-secondary" id="submit">
+                        </div>
+                        <br><br>
                         <a type="submit" class="btn btn-primary" href="{{ route('user.home') }}">マイページ</a>
                     </div>
                 </div>

@@ -27,7 +27,15 @@
     ul {
        list-style: none;
     }
-    
+
+    .chat-bottom{
+        padding-bottom:20px;
+    }
+    .chat-back{
+        background-image: url("../image/wallpaper.jpg");
+    }
+
+
     </style>
 
     <script>
