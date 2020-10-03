@@ -43341,7 +43341,7 @@ $(document).ready(function () {
     }
   });
   $("#submit").click(function () {
-    var url = "/user/chat/create";
+    var url = "/beautymatch/user/chat/create";
     $.ajax({
       url: url,
       data: {

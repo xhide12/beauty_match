@@ -7,7 +7,7 @@ $(document).ready(function() {
       }
   });
   $("#submit").click(function () {
-      const url = "/user/chat/create";
+      const url = "/beautymatch/user/chat/create";
       $.ajax({
           url: url,
           data: {
