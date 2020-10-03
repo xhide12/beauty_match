@@ -20,7 +20,6 @@
                             <input type="hidden" id="user_id" value="{{ $introduction->user_id }}">
                             <input type="hidden" id="manufacture_id" value="{{ $introduction->manufacture_id }}">
                             <input type="hidden" id="owner_type" value="user">
-                            <input type="hidden" id="owner_type" value="manufacture">
                             <input type="submit" value="送信"  class="btn btn-secondary" id="submit">
                         </div>
                         <br><br>
