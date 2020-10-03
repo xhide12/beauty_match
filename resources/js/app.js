@@ -7,6 +7,7 @@ $(document).ready(function() {
       }
   });
   $("#submit").click(function () {
+    $("#text").val('');
       const url = "/beautymatch/user/chat/create";
       $.ajax({
           url: url,
@@ -14,7 +15,8 @@ $(document).ready(function() {
             user_chat: $("#user_id").val(),
             manufacture_chat: $("#manufacture_id").val(),
             text: $("#text").val(),
-            introduction_id: $("#introduction_id").val()
+            introduction_id: $("#introduction_id").val(),
+           owner:$("#owner_type").val(),
           },
           method: "POST"
       });
@@ -22,6 +24,6 @@ $(document).ready(function() {
   });
   window.Echo.private('chat.' + $('#introduction_id').val())
       .listen('Chated', (e) => {
-          $("#board").append('<li>' + e.chat.text + '</li>');
+        $("#board").append('<li class="' + e.chat.owner + '">' + e.chat.text + '</li>');
       });
 });
