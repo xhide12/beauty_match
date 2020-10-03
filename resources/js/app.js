@@ -7,8 +7,9 @@ $(document).ready(function() {
       }
   });
   $("#submit").click(function () {
-      const url = "/beautymatch/user/chat/create";
-      $.ajax({
+    //   const url = "/beautymatch/user/chat/create";
+      const url = "/user/chat/create";
+    $.ajax({
           url: url,
           data: {
             user_chat: $("#user_id").val(),

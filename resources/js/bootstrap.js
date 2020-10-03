@@ -37,7 +37,8 @@ window.Pusher = require('pusher-js');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
-    authEndpoint: '/beautymatch/broadcasting/auth',
+    authEndpoint: '/broadcasting/auth',
+    // authEndpoint: '/beautymatch/broadcasting/auth',
     client:process.env.MIX_PUSHER_APP_ID,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
     encrypted: true

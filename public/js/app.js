@@ -43341,7 +43341,8 @@ $(document).ready(function () {
     }
   });
   $("#submit").click(function () {
-    var url = "/beautymatch/user/chat/create";
+    //   const url = "/beautymatch/user/chat/create";
+    var url = "/user/chat/create";
     $.ajax({
       url: url,
       data: {
@@ -43408,7 +43409,8 @@ window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/d
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "33c0f188158796ea0f47",
-  authEndpoint: '/beautymatch/broadcasting/auth',
+  authEndpoint: '/broadcasting/auth',
+  // authEndpoint: '/beautymatch/broadcasting/auth',
   client: process.env.MIX_PUSHER_APP_ID,
   cluster: "ap3",
   encrypted: true
