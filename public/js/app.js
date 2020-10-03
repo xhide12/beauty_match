@@ -43341,7 +43341,6 @@ $(document).ready(function () {
     }
   });
   $("#submit").click(function () {
-    $("#text").val('');
     var url = "/beautymatch/user/chat/create";
     $.ajax({
       url: url,
@@ -43354,6 +43353,7 @@ $(document).ready(function () {
       },
       method: "POST"
     });
+    $("#text").val('');
     return false;
   });
   window.Echo["private"]('chat.' + $('#introduction_id').val()).listen('Chated', function (e) {
