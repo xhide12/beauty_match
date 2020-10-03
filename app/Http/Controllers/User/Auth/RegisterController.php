@@ -72,9 +72,9 @@ class RegisterController extends Controller
             'customer'    => ['required', 'integer', 'max:255'],
             'salon_name'    => ['required', 'string', 'max:255'],
             'salon_url'    => ['nullable','string', 'max:255'],
-            'business_form'    => ['nullable','integer', 'max:11'],
+            // 'business_form'    => ['nullable','integer', 'max:11'],
             'monthly_sales'    => ['nullable','string', 'max:255'],
-            'living_area'    => ['nullable','integer', 'max:11'],
+            // 'living_area'    => ['nullable','integer', 'max:11'],
             'facebook_id'    => ['nullable','string', 'max:255'],
             'instagram_id'    => ['required', 'string', 'max:255'],
         ]);
@@ -90,9 +90,9 @@ class RegisterController extends Controller
             'customer'    => $data['customer'],
             'salon_name'    => $data['salon_name'],
             'salon_url'    => $data['salon_url'],
-            'business_form'    => $data['business_form'],
+            // 'business_form'    => $data['business_form'],
             'monthly_sales'    => $data['monthly_sales'],
-            'living_area'    => $data['living_area'],
+            // 'living_area'    => $data['living_area'],
             'facebook_id'    => $data['facebook_id'],
             'instagram_id'    => $data['instagram_id'],
         ]);
