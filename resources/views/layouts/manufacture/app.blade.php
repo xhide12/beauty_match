@@ -36,11 +36,11 @@
     }
 
     .user_talk{
-        text-align:right;
+        margin-left:auto;
     }
 
     .manufacture_talk{
-        text-align:left;
+        margin-right:auto;
     }
 
 
