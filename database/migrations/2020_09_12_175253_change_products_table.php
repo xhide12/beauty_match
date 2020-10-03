@@ -14,8 +14,8 @@ class ChangeProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('manufacture_id')->change();
-  
+            $table->renameColumn('manufacture', 'manufacture_id');
+            $table->integer('manufacture_id')->default(NULL)->change();
         });
     }
 
