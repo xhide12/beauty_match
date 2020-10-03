@@ -35,11 +35,11 @@
         background-image: url("../image/wallpaper.jpg");
     }
 
-    .user{
+    .user_talk{
         text-align:right;
     }
 
-    .manufacture{
+    .manufacture_talk{
         text-align:left;
     }
 

@@ -109,11 +109,11 @@
         padding-bottom:20px;
     }
 
-    .user{
+    .user_talk{
         text-align:left;
     }
 
-    .manufacture{
+    .manufacture_talk{
         text-align:right;
     }
 
