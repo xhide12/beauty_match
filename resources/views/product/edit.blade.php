@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">編集画面</div>
+                <div class="card-header">編集ページ</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -33,22 +33,22 @@
                                     <td>{{__('商品名')}}</td>
                                     <td><input type="text" name="product_name" value="{{old( 'product_name', $product->product_name )}}"></td>
                                 </tr>    
-                                <tr>
+                                <!-- <tr>
                                     <td>{{__('商品カテゴリー')}}</td>
                                     <td><input type="text" name="category" value="{{old( 'category', $product->category )}}"></td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td>{{__('販売上代(税込)')}}</td>
                                     <td><input type="text" name="price" value="{{old( 'price', $product->price )}}"></td>
                                 </tr>
                                 <tr>
-                                    <td>{{__('サイズ')}}</td>
-                                    <td><input type="text" name="size"" value="{{old( 'size', $product->size )}}"></td>
+                                    <td>{{__('カラー/サイズ')}}</td>
+                                    <td><input type="text" name="size" value="{{old( 'size', $product->size )}}"></td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>{{__('メーカー名')}}</td>
                                     <td><input type="text" name="manufacture_id" value="{{old( 'manufacture_id', $product->manufacture_id )}}"></td>
-                                </tr>
+                                </tr> -->
 
                                 <tr>
                                     <td>{{__('画像１')}}</td>
