@@ -35,6 +35,14 @@
         background-image: url("../image/wallpaper.jpg");
     }
 
+    .user{
+        text-align:right;
+    }
+
+    .manufacture{
+        text-align:left;
+    }
+
 
     </style>
 

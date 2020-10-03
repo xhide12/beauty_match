@@ -109,6 +109,14 @@
         padding-bottom:20px;
     }
 
+    .user{
+        text-align:left;
+    }
+
+    .manufacture{
+        text-align:right;
+    }
+
 
     </style>
 
