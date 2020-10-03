@@ -15,7 +15,10 @@ class ChangeProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->renameColumn('manufacture', 'manufacture_id');
-            $table->integer('manufacture_id')->default(NULL)->change();
+        });
+        // 型を変更
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('manufacture_id')->default(NULL)->change();
         });
     }
 
