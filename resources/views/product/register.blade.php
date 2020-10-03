@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="size" class="col-md-4 col-form-label text-md-right">{{ __('サイズ') }}</label>
+                            <label for="size" class="col-md-4 col-form-label text-md-right">{{ __('カラー/サイズ') }}</label>
 
                             <div class="col-md-6">
                                 <input id="size" type="size" class="form-control @error('size') is-invalid @enderror" name="size" value="{{ old('size') }}" required autocomplete="size">
