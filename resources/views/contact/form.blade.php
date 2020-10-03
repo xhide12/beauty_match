@@ -4,7 +4,7 @@
 
 <div class="container product_bannar">
 	<div class="row">
-        <div class="col-xs-12"><img class="img-fluid" src="../image/cotact-top.jpg"></div>
+        <div class="col-xs-12"><img class="img-fluid" src="image/cotact-top.jpg"></div>
 	</div>
 </div>
 
