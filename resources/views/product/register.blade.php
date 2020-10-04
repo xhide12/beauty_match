@@ -54,7 +54,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('商品カテゴリー') }}</label>
 
                             <div class="col-md-6">
@@ -66,7 +66,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="size" class="col-md-4 col-form-label text-md-right">{{ __('カラー/サイズ') }}</label>

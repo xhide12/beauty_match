@@ -48,7 +48,7 @@
                     <h5>カラー名：{{ $product->size }}</h5>
 
                     <h6>メーカー：{{ optional($product->manufacture)->company_name }}</h6>
-                    <h6>カテゴリー：{{ $product->category }}</h6>
+                    <!-- <h6>カテゴリー：{{ $product->category }}</h6> -->
                     <h6>店頭販売価格(税込)：{{ number_format($product->price) }}円</h6>
                     <br>
                     <p>{{ $product->product_coment }}</p>
