@@ -12,24 +12,27 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
         <img src="image/top-image-1.png" alt="responsive image" class="d-block img-fluid">
-        <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
-        <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
+        <div class="carousel-caption d-none d-md-block">
+        <h4 class="font-weight-bold" style="color: #808080;">美容系フリーランスの皆さまと一緒につくる</h4>   
+        <h5 class="font-weight-bold" style="color: #808080;">”想われる"時代の</h5>
+        <h5 class="font-weight-bold" style="color: #808080;">コスメ商品の紹介プラットフォーム</h5><br><br><br><br><br><br>
         </div>
     </div>
     <div class="carousel-item">
         <img src="image/top-image-2.png" alt="responsive image" class="d-block img-fluid">
-        <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
-        <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
+        <div class="carousel-caption d-none d-md-block">
+        <h4 class="font-weight-bold" style="color: #3366FF;">美容系フリーランスの皆さまと一緒につくる</h4>        
+        <h5 class="font-weight-bold" style="color: #3366FF;">”想われる"時代の</h5>
+        <h5 class="font-weight-bold" style="color: #3366FF;">コスメ商品の紹介プラットフォーム</h5><br><br><br><br><br><br>
         </div>
 
     </div>
     <div class="carousel-item">
         <img src="image/top-image-3.png" alt="responsive image" class="d-block img-fluid">
-        <div class="carousel-caption d-none d-md-block text-dark">
-        <h5 class="font-weight-bold">”感情"と"信頼"の時代の</h5>
-        <h5 class="font-weight-bold">美容系商品のサンプリングプラットフォーム</h5><br><br><br><br><br><br>
+        <div class="carousel-caption d-none d-md-block">
+        <h4 class="font-weight-bold" style="color: #FF6699";>美容系フリーランスの皆さまと一緒につくる</h4>       
+        <h5 class="font-weight-bold" style="color: #FF6699;">”想われる"時代の</h5>
+        <h5 class="font-weight-bold" style="color: #FF6699;">コスメ商品の紹介プラットフォーム</h5><br><br><br><br><br><br>
         </div>
 
     </div>
@@ -38,54 +41,56 @@
 
 <br><br>
 
-<div class="card-deck" style="margin-bottom: 10px;>
-  <div class="d-flex flex-row">
-    <div class="card mb-6" style="max-width: 600px">
-      <div class="row no-gutters">
-            <div class="col-md-4 my-auto">
-                <img class="card-img" src="image/user-icon-1.png">
-            </div>
-            <div class="col-md-8 text-center">
-                <div class="card-body">
-                <h4 class="card-title">for Beauty Freelance</h4>
-                <p class="card-text">お客様に商品紹介したい美容系フリーランスの方<br>(インフルエンサーになりたい方)</p>
-                @unless (Auth::guard('user')->check())
-                  <a href="{{ route('user.register') }}" class="btn btn-primary">新規登録</a>　<a href="{{ route('user.login') }}" class="btn btn-primary">ログイン</a>
-                @else
-                  <a href="{{ route('user.home') }}" class="btn btn-primary">マイページ</a>
-                @endunless
-                </div>
-            </div>
-      </div>
-    </div>
-    <div class="card mb-6" style="max-width: 600px">
-      <div class="row no-gutters">
-        <div class="col-md-4 my-auto">
-            <img class="card-img" src="image/manufacture-icon-1.png">
+  <div class="card-deck" style="margin-bottom: 10px;">
+    <div class="d-flex flex-row">
+      <div class="card mb-6" style="max-width: 600px;">
+        <div class="row no-gutters">
+              <div class="col-md-4 my-auto">
+                  <img class="card-img" src="image/user-icon-1.png">
+              </div>
+              <div class="col-md-8 text-center">
+                  <div class="card-body">
+                  <h4 class="card-title font-weight-bold">for Beauty Freelance</h4>
+                  <p class="card-text">お客様に商品を紹介したい<br>美容系フリーランスの方</p>
+                  @unless (Auth::guard('user')->check())
+                    <a href="{{ route('user.register') }}" class="btn btn-primary">新規登録</a>　<a href="{{ route('user.login') }}" class="btn btn-primary">ログイン</a>
+                  @else
+                    <a href="{{ route('user.home') }}" class="btn btn-primary">マイページ</a>
+                  @endunless
+                  </div>
+              </div>
         </div>
-        <div class="col-md-8 text-center">
-            <div class="card-body">
-            <h4 class="card-title">for COMPANY</h4>
-            <p class="card-text">商品PRやプロモーションを依頼したい方<br>(既存の方法に限界を感じているご担当社様)</p>
-            @unless (Auth::guard('manufacture')->check())
-              <a href="{{ route('manufacture.register') }}" class="btn btn-primary">新規登録</a>　<a href="{{ route('manufacture.login') }}" class="btn btn-primary">ログイン</a>
-            @else   
-              <a href="{{ route('manufacture.home') }}" class="btn btn-primary">管理画面</a>
-            @endunless
+      </div>
+      <div class="card mb-6" style="max-width: 600px">
+        <div class="row no-gutters">
+          <div class="col-md-4 my-auto">
+              <img class="card-img" src="image/manufacture-icon-1.png">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="card-body">
+              <h4 class="card-title font-weight-bold">for COMPANY</h4>
+              <p class="card-text">商品紹介を依頼したいメーカーのご担当者様<br>(既存のサンプリングに限界を感じている方)</p>
+              @unless (Auth::guard('manufacture')->check())
+                <a href="{{ route('manufacture.register') }}" class="btn btn-primary">新規登録</a>　<a href="{{ route('manufacture.login') }}" class="btn btn-primary">ログイン</a>
+              @else   
+                <a href="{{ route('manufacture.home') }}" class="btn btn-primary">管理画面</a>
+              @endunless
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
 <br><br>
 
-<div class="container-fluid">
+<div class="container-fluid top-margin">
 	<div class="row">
 		<div class="col-xs-12 cover-img scrollanime downup" style="background-image:url('image/top_back-2.png');">
-			<div class="cover-text text-center">
-				<p style="color: #fff;">ここがテキストですよ！！</p>
+			<div class="cover-text font-weight-bold" style="color: #333333;">
+        <h5 class="font-weight-bold">商品を直接、お客様にご紹介できる方法はないかと思い、このサイトを作りました。</h5>
+				<p>新型コロナが世界中を襲っているさなか、ネットでの商品販売が当たり前の世の中になりました。<br>そして、インスタやYoutubeでの商品ＰＲも当たり前の時代になりました。</p>
+        <p>世界では長い間、「可処分所得」の奪い合いを繰り返してきましたが、<br>インターネットの時代に入ってからは「可処分時間」の奪い合いにシフトしてきています。<br>そして、これからの時代は「可処分精神」をどうやって奪うかが、ポイントになることが予想されます。<br><br>「可処分精神」とは簡単にいうと、お客様からどれだけ<span class="text-danger">想われる</span>商品やサービスをつくるか？<br>もう少し分解するとそれらの商品やサービスを<span class="text-danger">想われる人</span>が紹介することが重要になってくると思っています。<br>そこでお客様から<span class="text-danger">想われる</span>皆さまと一緒に新たなサービスをつくりたいと考えてサイトを立ち上げました。</p>
 			</div>
 		</div>
 	</div>
@@ -93,7 +98,7 @@
 
 <br><br>
 
-<div class="container">
+<div class="container top-margin">
   <div class="scrollanime downup d-flex justify-content-between">
     <h5 class="font-weight-bold">★★紹介してほしい商品★★</h5>
     <h6><a href="{{ route('product_index') }}">もっと見る＞＞</a></h6>
