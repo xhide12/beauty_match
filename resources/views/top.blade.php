@@ -88,9 +88,9 @@
 	<div class="row">
 		<div class="col-xs-12 cover-img scrollanime downup" style="background-image:url('image/top_back-2.png');">
 			<div class="cover-text font-weight-bold" style="color: #333333;">
-        <h5 class="font-weight-bold">商品を直接、お客様にご紹介できる方法はないかと思い、このサイトを作りました。</h5>
+        <h5 class="font-weight-bold">商品を直接、お客様にご紹介できる方法はないかと思い、このサイトを始めました。</h5><br>
 				<p>新型コロナが世界中を襲っているさなか、ネットでの商品販売が当たり前の世の中になりました。<br>そして、インスタやYoutubeでの商品ＰＲも当たり前の時代になりました。</p>
-        <p>世界では長い間、「可処分所得」の奪い合いを繰り返してきましたが、<br>インターネットの時代に入ってからは「可処分時間」の奪い合いにシフトしてきています。<br>そして、これからの時代は「可処分精神」をどうやって奪うかが、ポイントになることが予想されます。<br><br>「可処分精神」とは簡単にいうと、お客様からどれだけ<span class="text-danger">想われる</span>商品やサービスをつくるか？<br>もう少し分解するとそれらの商品やサービスを<span class="text-danger">想われる</span>人が紹介することが重要になってくると思っています。<br>そこでお客様から<span class="text-danger">想われる</span>皆さまと一緒に新たなサービスをつくりたいと思いサイトを立ち上げました。</p>
+        <p>だからこそ、BeautyMatchでは<span class="text-danger">「人とのつながり」</span>を大切にしたいと思っています。<br>お客様(エンドユーザー)から信頼されるお仕事をされている皆さまから<span class="text-danger">「直接」</span>、<br>メーカーの商品に対する<span class="text-danger">「想い」</span>を伝えていただきたくてこのサイトを立ち上げました。<br><br>お客様から<span class="text-danger">「想われる」</span>皆さまと一緒に、新たなサービスを作っていけると幸いです。</p>
 			</div>
 		</div>
 	</div>

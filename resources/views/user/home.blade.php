@@ -36,11 +36,11 @@
                                             <tr>
                                                 <td nowrap>{{ $user->name }}</td>
                                                 <td nowrap>{{ $user->email }}</td>
-                                                <td nowrap>{{ $user->customer }}</td>
+                                                <td nowrap>{{ $user->customer }}人</td>
                                                 <td nowrap>{{ $user->salon_name}}</td>
                                                 <td nowrap>{{ $user->salon_url}}</td>
                                                 <!-- <td nowrap>{{ $user->business_form}}</td> -->
-                                                <td nowrap>{{ $user->monthly_sales}}</td>
+                                                <td nowrap>{{ $user->monthly_sales}}円</td>
                                                 <!-- <td nowrap>{{ $user->living_area}}</td> -->
                                                 <td nowrap>{{ $user->facebook_id}}</td>
                                                 <td nowrap>{{ $user->instagram_id}}</td>
