@@ -43358,7 +43358,6 @@ $(document).ready(function () {
     return false;
   });
   window.Echo["private"]('chat.' + $('#introduction_id').val()).listen('Chated', function (e) {
-    console.log(e.chat);
     $("#board").append('<li class="' + e.chat.owner + '">' + e.chat.text + '</li>');
   });
 });

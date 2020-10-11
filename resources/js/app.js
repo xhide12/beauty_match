@@ -25,7 +25,6 @@ $(document).ready(function() {
   });
   window.Echo.private('chat.' + $('#introduction_id').val())
       .listen('Chated', (e) => {
-        console.log(e.chat);
         $("#board").append('<li class="' + e.chat.owner + '">' + e.chat.text + '</li>');
       });
 });
